@@ -15,13 +15,25 @@ impl Borrow<[u8]> for BufferWrapper {
 }
 
 fn main() {
-    const WIDTH: u32 = 800;
-    const HEIGHT: u32 = 400;
+    const WIDTH: u32 = 1920;
+    const HEIGHT: u32 = 1080;
 
     let vec_x = Vec3::new(4.0, 0.0, 0.0);
     let vec_y = Vec3::new(0.0, 2.0, 0.0);
     let vec_z = Vec3::new(-2.0, -1.0, -1.0);
-    let camera = Camera::new(vec_x, vec_y, vec_z);
+    let lookfrom = Vec3::new(12.0, 2.08, 2.0);
+    let lookat = Vec3::new(0.0, 0.0, 0.0);
+    let dist_to_focus: f64 = 10.0;
+    let aperture: f64 = 0.1;
+    let camera = Camera::new(
+        lookfrom,
+        lookat,
+        Vec3::new(0.0, 1.0, 0.0),
+        20.0,
+        (WIDTH as f64) / (HEIGHT as f64),
+        aperture,
+        dist_to_focus,
+    );
 
     let sphere = Sphere::new(Vec3::new(0.0, 0.0, -1.0), 0.5);
     let mut buf = BufferWrapper(vec![0u32; (WIDTH * HEIGHT) as usize]);
@@ -65,7 +77,13 @@ fn gen_color(ray: &Ray, sphere: &Sphere) -> Vec3 {
         let n = (ray.at(t) - sphere.center()).normalize();
         return (n + Vec3::new(1.0, 1.0, 1.0)).dir(0.5);
     }
-    let t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
+    let mut t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
+    if t < 0.0 {
+        t = 0.0;
+    }
+    if t > 1.0 {
+        t = 1.0;
+    }
     Vec3::lerp(t, &Vec3::new(0.5, 0.7, 1.0), &Vec3::new(1.0, 1.0, 1.0))
 }
 
