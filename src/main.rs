@@ -1,6 +1,7 @@
 use std::borrow::Borrow;
 use std::path::Path;
 
+use ray_tracers::base::color::{Color, GREEN, RED, WHITE};
 use ray_tracers::base::vec::Vec3;
 use ray_tracers::object::camera::Camera;
 use ray_tracers::object::ray::Ray;
@@ -32,12 +33,7 @@ fn main() {
             let v = (j as f64) / (HEIGHT as f64);
             let ray = camera.get_ray(u, v);
             let col = gen_color(&ray, &sphere);
-            buf.0[(i + j * WIDTH) as usize] = rgba_to_u32(
-                (col.get_x() * 255.0) as u8,
-                (col.get_y() * 255.0) as u8,
-                (col.get_z() * 255.0) as u8,
-                0xFF,
-            );
+            buf.0[(i + j * WIDTH) as usize] = col.to_u32();
         }
     }
 
@@ -59,14 +55,17 @@ fn rgba_to_u32(red: u8, green: u8, blue: u8, alpha: u8) -> u32 {
     a | r | g | b
 }
 
-fn gen_color(ray: &Ray, sphere: &Sphere) -> Vec3 {
+fn gen_color(ray: &Ray, sphere: &Sphere) -> Color {
     let t = sphere.hit_sphere(ray);
     if t > 0.0 {
         let n = (ray.at(t) - sphere.center()).normalize();
-        return (n + Vec3::new(1.0, 1.0, 1.0)).dir(0.5);
+        return Color::from_vec3(n + Vec3::new(1.0, 1.0, 1.0), 255);
     }
     let t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
-    Vec3::lerp(t, &Vec3::new(0.5, 0.7, 1.0), &Vec3::new(1.0, 1.0, 1.0))
+    Color::from_vec3(
+        Vec3::lerp(t, &Vec3::new(0.5, 0.7, 1.0), &Vec3::new(1.0, 1.0, 1.0)),
+        255,
+    )
 }
 
 #[test]
