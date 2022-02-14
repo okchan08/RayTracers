@@ -73,7 +73,6 @@ fn gen_color(ray: &Ray, sphere: &Sphere) -> Color {
         let n = (ray.at(t) - sphere.center()).normalize();
         return Color::from_vec3(n + Vec3::new(1.0, 1.0, 1.0), 255);
     }
-    let t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
     let mut t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
     if t < 0.0 {
         t = 0.0;

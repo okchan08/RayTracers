@@ -1,5 +1,7 @@
 use crate::base::vec::Vec3;
+use crate::object::hit::HitInfo;
 use crate::object::ray::Ray;
+use crate::object::shape::Shape;
 
 pub struct Sphere {
   center: Vec3,
@@ -30,6 +32,39 @@ impl Sphere {
 
   pub fn center(&self) -> Vec3 {
     self.center
+  }
+}
+
+impl Shape for Sphere {
+  fn hit(sphere: &Self, ray: &Ray, t0: f64, t1: f64) -> Option<HitInfo> {
+    let v_oc = ray.origin() - &sphere.center;
+    let a = ray.direction().dot(ray.direction());
+    let b = ray.direction().dot(&v_oc) * 2.0;
+    let c = v_oc.dot(&v_oc) - sphere.radius * sphere.radius;
+    let d = b * b - 4.0 * a * c;
+
+    if d > 0.0 {
+      let root = d.sqrt();
+      let mut temp = (-b - root) / (2.0 * a);
+      if temp < t1 && temp > t0 {
+        let pos = ray.at(temp);
+        Some(HitInfo::new(
+          temp,
+          pos.clone(),
+          (pos - sphere.center()).dir(1.0 / sphere.radius),
+        ));
+      }
+      temp = (-b + root) / (2.0 * a);
+      if temp < t1 && temp > t0 {
+        let pos = ray.at(temp);
+        Some(HitInfo::new(
+          temp,
+          pos.clone(),
+          (pos - sphere.center()).dir(1.0 / sphere.radius),
+        ));
+      }
+    }
+    None
   }
 }
 
