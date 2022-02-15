@@ -1,7 +1,8 @@
 use crate::base::vec::Vec3;
 use crate::object::ray::Ray;
 
-use rand::Rng;
+use rand::rngs::StdRng;
+use rand::{Rng, SeedableRng};
 
 // カメラ(=視界)を表す構造体
 pub struct Camera {
@@ -75,7 +76,12 @@ impl Camera {
 
   // 単位円上の点でかつある程度内側に近い点を返す
   fn random_in_unit_disk() -> Vec3 {
-    let mut rng = rand::thread_rng();
+    let unix_time = std::time::SystemTime::now()
+      .duration_since(std::time::SystemTime::UNIX_EPOCH)
+      .expect("failed to get UNIX time")
+      .as_nanos();
+
+    let mut rng = StdRng::seed_from_u64(unix_time as u64);
     let mut p: Vec3 = Vec3::new(0.0, 0.0, 0.0);
     // 単位円の内部にある(=長さが1^2以下)のベクトルが生成されるまでサンプリング
     while p.dot(&p) >= 1.0 {

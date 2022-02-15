@@ -3,43 +3,50 @@ use std::path::Path;
 
 use ray_tracers::base::vec::Vec3;
 use ray_tracers::object::camera::Camera;
+use ray_tracers::object::material::Material;
 use ray_tracers::object::sphere::Sphere;
 use ray_tracers::scene::Scene;
 
 fn main() {
     const WIDTH: u32 = 680;
     const HEIGHT: u32 = 460;
-    const SAMPLING: u32 = 100;
+    const SAMPLING: u32 = 10;
+    const MAX_SCATTER_DEPTH: u32 = 50;
 
-    let lookfrom = Vec3::new(12.0, 2.08, 2.0);
-    let lookat = Vec3::new(0.0, 0.0, 0.0);
-    let dist_to_focus: f64 = 10.0;
-    let aperture: f64 = 0.1;
     let camera = Camera::new(
-        lookfrom,
-        lookat,
-        Vec3::new(0.0, 1.0, 0.0),
-        20.0,
-        (WIDTH as f64) / (HEIGHT as f64),
-        aperture,
-        dist_to_focus,
+        Vec3::new(0.0, -20.0, 3.0),       // lookfrom
+        Vec3::new(0.0, -1.0, 0.0),        // lookat
+        Vec3::new(0.0, 1.0, -0.5),        // vup
+        20.0,                             // vfov
+        (WIDTH as f64) / (HEIGHT as f64), // aspect
+        0.1,                              // aperture
+        10.0,                             // dist_to_focus
     );
 
-    let mut scene = Scene::new(camera, WIDTH, HEIGHT, SAMPLING);
+    let mut scene = Scene::new(camera, WIDTH, HEIGHT, SAMPLING, MAX_SCATTER_DEPTH);
     scene.add_object(Box::new(Sphere::new(
-        Vec3::new(0.0, 0.0, -1.0),
-        0.5,
-        "sphere 1".to_string(),
-    )));
-    scene.add_object(Box::new(Sphere::new(
-        Vec3::new(-20.0, 0.0, -4.0),
-        0.2,
-        "sphere 2".to_string(),
-    )));
-    scene.add_object(Box::new(Sphere::new(
-        Vec3::new(-70.0, -10.0, 0.0),
+        Vec3::new(0.0, 1.0, 0.75),
         1.5,
-        "sphere 3".to_string(),
+        "sphere 1".to_string(),
+        Material::Lambertian {
+            albedo: Vec3::from_one(0.5),
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(2.0, 0.0, 0.4),
+        0.8,
+        "sphere 2".to_string(),
+        Material::Lambertian {
+            albedo: Vec3::from_one(0.9),
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(0.0, 0.0, -100.0),
+        100.5,
+        "floor".to_string(),
+        Material::Lambertian {
+            albedo: Vec3::from_one(1.0),
+        },
     )));
     let buf = scene.render();
 

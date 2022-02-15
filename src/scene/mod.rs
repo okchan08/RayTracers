@@ -21,17 +21,25 @@ pub struct Scene {
   width: u32,
   height: u32,
   super_samples: u32,
+  max_scatter_depth: u32,
   objects: RefCell<Vec<Box<dyn Shape>>>,
 }
 
 impl Scene {
-  pub fn new(camera: Camera, width: u32, height: u32, super_samples: u32) -> Self {
+  pub fn new(
+    camera: Camera,
+    width: u32,
+    height: u32,
+    super_samples: u32,
+    max_scatter_depth: u32,
+  ) -> Self {
     Scene {
       camera: camera,
       background_color: WHITE,
       width: width,
       height: height,
       super_samples: super_samples,
+      max_scatter_depth: max_scatter_depth,
       objects: RefCell::new(vec![]),
     }
   }
@@ -58,7 +66,7 @@ impl Scene {
           let u = (i as f64) / (self.width as f64);
           let v = (j as f64) / (self.height as f64);
           let ray = self.camera.get_ray(u, v);
-          let c = Self::gen_color(&ray, &self.objects.borrow());
+          let c = self.gen_color(&ray, &self.objects.borrow(), 0);
           col = col + c;
         }
         col = col / (self.super_samples as f64);
@@ -68,14 +76,24 @@ impl Scene {
     BufferWrapper(buf)
   }
 
-  fn gen_color(ray: &Ray, shapes: &Vec<Box<dyn Shape>>) -> Vec3 {
+  fn gen_color(&self, ray: &Ray, shapes: &Vec<Box<dyn Shape>>, depth: u32) -> Vec3 {
     for shape in shapes.iter() {
       if let Some(hit_info) = shape.hit(ray, 0.0, std::f64::MAX) {
-        return (hit_info.get_normal().clone() + Vec3::new(1.0, 1.0, 1.0)).dir(0.5);
+        let (scattered, attenuation, scatterd_flag) = shape.scatter(&hit_info);
+        if depth < self.max_scatter_depth && scatterd_flag {
+          let c = self.gen_color(&scattered, shapes, depth + 1);
+          return Vec3::new(
+            attenuation.get_x() * c.get_x(),
+            attenuation.get_y() * c.get_y(),
+            attenuation.get_z() * c.get_z(),
+          );
+        }
+        //return (hit_info.get_normal().clone() + Vec3::new(1.0, 1.0, 1.0)).dir(0.5);
+        return Vec3::zero_vector();
       }
     }
-    let mut t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
+    let mut t: f64 = 0.5f64 * (ray.direction().normalize().get_z() + 1.0_f64);
     t = t.clamp(0.0, 1.0);
-    return Vec3::lerp(t, &Vec3::new(0.5, 0.7, 1.0), &Vec3::new(1.0, 1.0, 1.0));
+    Vec3::lerp(t, &Vec3::new(1.0, 1.0, 1.0), &Vec3::new(0.5, 0.7, 1.0))
   }
 }

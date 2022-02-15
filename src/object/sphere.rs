@@ -12,21 +12,17 @@ pub struct Sphere {
 }
 
 impl Sphere {
-  pub fn new(center: Vec3, radius: f64, name: String) -> Self {
+  pub fn new(center: Vec3, radius: f64, name: String, material: Material) -> Self {
     Self {
       center: center,
       radius: radius,
       name: name,
-      material: Material::Diffuse,
+      material: material,
     }
   }
 
   pub fn center(&self) -> Vec3 {
     self.center
-  }
-
-  fn hit_diffuse(&self, ray: &Ray, lower_range: f64, upper_range: f64) -> Option<HitInfo> {
-    None
   }
 }
 
@@ -47,6 +43,7 @@ impl Shape for Sphere {
           temp,
           pos.clone(),
           (pos - self.center()).dir(1.0 / self.radius),
+          self.material,
         ));
       }
       temp = (-b + root) / (2.0 * a);
@@ -56,10 +53,32 @@ impl Shape for Sphere {
           temp,
           pos.clone(),
           (pos - self.center()).dir(1.0 / self.radius),
+          self.material,
         ));
       }
     }
     None
+  }
+
+  fn scatter(&self, hit_info: &HitInfo) -> (Ray, Vec3, bool) {
+    match hit_info.get_hit_material() {
+      Material::Lambertian { albedo } => {
+        let target = hit_info.get_normal().clone()
+          + hit_info.get_poisition().clone()
+          + Vec3::gen_random_vector_in_unit_shpere();
+
+        let scattered = Ray::new(
+          hit_info.get_poisition().clone(),
+          target - hit_info.get_poisition().clone(),
+        );
+        return (scattered, albedo.clone(), true);
+      }
+      _ => (
+        Ray::new(Vec3::zero_vector(), Vec3::zero_vector()),
+        Vec3::zero_vector(),
+        false,
+      ),
+    }
   }
 
   fn name(&self) -> &str {
@@ -72,7 +91,12 @@ mod sphere_test {
   use super::*;
   #[test]
   fn test_hit() {
-    let sphere = Sphere::new(Vec3::new(0.0, 0.0, 0.0), 1.0, "sample".to_string());
+    let sphere = Sphere::new(
+      Vec3::new(0.0, 0.0, 0.0),
+      1.0,
+      "sample".to_string(),
+      Material::Black,
+    );
     let r1 = Ray::new(Vec3::new(0.0, 0.0, 0.0), Vec3::new(1.0, 0.0, 0.0));
     let r2 = Ray::new(Vec3::new(3.0, 0.0, 0.0), Vec3::new(0.0, 1.0, 0.0));
 
