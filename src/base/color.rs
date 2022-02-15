@@ -49,11 +49,11 @@ impl Color {
   }
 
   pub fn from_vec3(from: Vec3, alpha: u8) -> Self {
-    let n = from.normalize();
+    //let n = from.normalize();
     Color {
-      r: (n.get_x() * 255.0) as u8,
-      g: (n.get_y() * 255.0) as u8,
-      b: (n.get_z() * 255.0) as u8,
+      r: (from.get_x().clamp(0.0, 1.0) * 255.0) as u8,
+      g: (from.get_y().clamp(0.0, 1.0) * 255.0) as u8,
+      b: (from.get_z().clamp(0.0, 1.0) * 255.0) as u8,
       a: alpha,
     }
   }

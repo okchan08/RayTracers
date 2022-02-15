@@ -6,14 +6,7 @@ use ray_tracers::base::vec::Vec3;
 use ray_tracers::object::camera::Camera;
 use ray_tracers::object::ray::Ray;
 use ray_tracers::object::sphere::Sphere;
-
-struct BufferWrapper(Vec<u32>);
-
-impl Borrow<[u8]> for BufferWrapper {
-    fn borrow(&self) -> &[u8] {
-        unsafe { std::slice::from_raw_parts(self.0.as_ptr() as *const u8, self.0.len() * 4) }
-    }
-}
+use ray_tracers::scene::Scene;
 
 fn main() {
     const WIDTH: u32 = 1920;
@@ -36,18 +29,18 @@ fn main() {
         dist_to_focus,
     );
 
-    let sphere = Sphere::new(Vec3::new(0.0, 0.0, -1.0), 0.5);
-    let mut buf = BufferWrapper(vec![0u32; (WIDTH * HEIGHT) as usize]);
-
-    for j in 0..HEIGHT {
-        for i in 0..WIDTH {
-            let u = (i as f64) / (WIDTH as f64);
-            let v = (j as f64) / (HEIGHT as f64);
-            let ray = camera.get_ray(u, v);
-            let col = gen_color(&ray, &sphere);
-            buf.0[(i + j * WIDTH) as usize] = col.to_u32();
-        }
-    }
+    let mut scene = Scene::new(camera, WIDTH, HEIGHT);
+    //scene.add_object(Box::new(Sphere::new(
+    //    Vec3::new(0.0, 0.0, -1.0),
+    //    0.5,
+    //    "sphere 1".to_string(),
+    //)));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-20.0, 0.0, -4.0),
+        0.2,
+        "sphere 2".to_string(),
+    )));
+    let buf = scene.render();
 
     image::save_buffer(
         &Path::new("test.png"),

@@ -1,5 +1,6 @@
 use crate::base::vec::Vec3;
 
+#[derive(Debug)]
 pub struct HitInfo {
   // 光線のパラメタ
   t: f64,
@@ -16,5 +17,17 @@ impl HitInfo {
       position: position,
       normal: normal,
     }
+  }
+
+  pub fn get_t(&self) -> f64 {
+    self.t
+  }
+
+  pub fn get_poisition(&self) -> &Vec3 {
+    &self.position
+  }
+
+  pub fn get_normal(&self) -> &Vec3 {
+    &self.normal
   }
 }
