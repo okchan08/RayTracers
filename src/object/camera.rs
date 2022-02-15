@@ -1,8 +1,6 @@
-use crate::base::math::RAND_GEN;
+use crate::base::math::get_random;
 use crate::base::vec::Vec3;
 use crate::object::ray::Ray;
-use rand::rngs::StdRng;
-use rand::{Rng, SeedableRng};
 
 // カメラ(=視界)を表す構造体
 pub struct Camera {
@@ -76,15 +74,10 @@ impl Camera {
 
   // 単位円上の点でかつある程度内側に近い点を返す
   fn random_in_unit_disk() -> Vec3 {
-    let mut p: Vec3 = Vec3::new(0.0, 0.0, 0.0);
+    let mut p: Vec3 = Vec3::new(10.0, 0.0, 0.0);
     // 単位円の内部にある(=長さが1^2以下)のベクトルが生成されるまでサンプリング
     while p.dot(&p) >= 1.0 {
-      p = (Vec3::new(
-        RAND_GEN.lock().unwrap().gen(),
-        RAND_GEN.lock().unwrap().gen(),
-        0.0,
-      ) - Vec3::new(1.0, 1.0, 0.0))
-      .dir(2.0);
+      p = (Vec3::new(get_random(), get_random(), 0.0) - Vec3::new(1.0, 1.0, 0.0)).dir(2.0);
     }
     return p;
   }

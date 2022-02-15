@@ -1,6 +1,6 @@
 use once_cell::sync::Lazy;
 use rand::rngs::StdRng;
-use rand::SeedableRng;
+use rand::{Rng, SeedableRng};
 use std::sync::Mutex;
 pub fn clamp<T>(v: T, min: T, max: T) -> T
 where
@@ -9,5 +9,9 @@ where
   v.max(min).min(max)
 }
 
-pub static RAND_GEN: Lazy<Mutex<StdRng>> =
-  Lazy::new(|| Mutex::new(StdRng::seed_from_u64(125130568)));
+static RAND_GEN: Lazy<Mutex<StdRng>> = Lazy::new(|| Mutex::new(StdRng::seed_from_u64(125130568)));
+
+pub fn get_random() -> f64 {
+  let x: f64 = RAND_GEN.lock().unwrap().gen();
+  x
+}
