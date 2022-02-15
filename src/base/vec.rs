@@ -12,6 +12,18 @@ impl Vec3 {
     Vec3 { x: x, y: y, z: z }
   }
 
+  pub fn from_one(v: f64) -> Self {
+    Vec3 { x: v, y: v, z: v }
+  }
+
+  pub fn unit_vector() -> Self {
+    Self::from_one(1.0)
+  }
+
+  pub fn zero_vector() -> Self {
+    Self::from_one(0.0)
+  }
+
   pub fn norm(&self) -> f64 {
     (self.x * self.x + self.y * self.y + self.z * self.z).sqrt()
   }
@@ -124,6 +136,12 @@ mod test {
   fn test_norm() {
     assert_eq!(Vec3::new(1.0, 1.0, 1.0).norm(), 3.0_f64.sqrt());
     assert_eq!(Vec3::new(2.5, 1.0, 0.0).norm(), 7.25_f64.sqrt());
+  }
+
+  #[test]
+  fn test_constructor() {
+    assert_eq!(Vec3::unit_vector(), Vec3::new(1.0, 1.0, 1.0));
+    assert_eq!(Vec3::zero_vector(), Vec3::new(0.0, 0.0, 0.0));
   }
 
   #[test]
