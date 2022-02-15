@@ -78,7 +78,7 @@ impl Scene {
 
   fn gen_color(&self, ray: &Ray, shapes: &Vec<Box<dyn Shape>>, depth: u32) -> Vec3 {
     for shape in shapes.iter() {
-      if let Some(hit_info) = shape.hit(ray, 0.0, std::f64::MAX) {
+      if let Some(hit_info) = shape.hit(ray, 0.001, std::f64::MAX) {
         let (scattered, attenuation, scatterd_flag) = shape.scatter(&hit_info);
         if depth < self.max_scatter_depth && scatterd_flag {
           let c = self.gen_color(&scattered, shapes, depth + 1);

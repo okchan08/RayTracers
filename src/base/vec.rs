@@ -2,6 +2,8 @@ use rand::rngs::StdRng;
 use rand::{Rng, SeedableRng};
 use std::ops::{Add, Div, Mul, Sub};
 
+use crate::base::math::RAND_GEN;
+
 #[derive(Debug, Clone, Copy)]
 pub struct Vec3 {
   x: f64,
@@ -27,17 +29,17 @@ impl Vec3 {
   }
 
   pub fn gen_random_vector() -> Self {
-    let unix_time = std::time::SystemTime::now()
-      .duration_since(std::time::SystemTime::UNIX_EPOCH)
-      .expect("failed to get UNIX time")
-      .as_nanos();
+    //let unix_time = std::time::SystemTime::now()
+    //  .duration_since(std::time::SystemTime::UNIX_EPOCH)
+    //  .expect("failed to get UNIX time")
+    //  .as_nanos();
 
-    let mut rng = StdRng::seed_from_u64((unix_time & (std::u64::MAX - 1) as u128) as u64);
+    //let mut rng = StdRng::seed_from_u64((unix_time & (std::u64::MAX - 1) as u128) as u64);
 
     Vec3 {
-      x: rng.gen(),
-      y: rng.gen(),
-      z: rng.gen(),
+      x: RAND_GEN.lock().unwrap().gen(),
+      y: RAND_GEN.lock().unwrap().gen(),
+      z: RAND_GEN.lock().unwrap().gen(),
     }
   }
 
