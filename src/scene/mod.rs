@@ -47,45 +47,34 @@ impl Scene {
   }
 
   pub fn render(&self) -> BufferWrapper {
-    println!("objects: {}", self.objects.borrow().len());
     let mut buf = vec![0u32; (self.width * self.height) as usize];
 
     for i in 0..self.width {
       for j in 0..self.height {
-        for obj in self.objects.borrow().iter() {
-          let u = (i as f64) / (self.width as f64);
-          let v = (j as f64) / (self.height as f64);
-          let ray = self.camera.get_ray(u, v);
-          let col = Self::gen_color(&ray, obj);
-          buf[(i + j * self.width) as usize] = col.to_u32();
-        }
+        let u = (i as f64) / (self.width as f64);
+        let v = (j as f64) / (self.height as f64);
+        let ray = self.camera.get_ray(u, v);
+        let col = Self::gen_color(&ray, &self.objects.borrow());
+        buf[(i + j * self.width) as usize] = col.to_u32();
       }
     }
     BufferWrapper(buf)
   }
 
-  fn gen_color(ray: &Ray, shape: &Box<dyn Shape>) -> Color {
-    if let Some(hit_info) = shape.hit(ray, 0.0, std::f64::MAX) {
-      return Color::from_vec3(
-        (hit_info.get_normal().clone() + Vec3::new(1.0, 1.0, 1.0)).dir(0.5),
-        255,
-      );
+  fn gen_color(ray: &Ray, shapes: &Vec<Box<dyn Shape>>) -> Color {
+    for shape in shapes.iter() {
+      if let Some(hit_info) = shape.hit(ray, 0.0, std::f64::MAX) {
+        return Color::from_vec3(
+          (hit_info.get_normal().clone() + Vec3::new(1.0, 1.0, 1.0)).dir(0.5),
+          255,
+        );
+      }
     }
-    //let t = sphere.hit_sphere(ray);
-    //if t > 0.0 {
-    //  let n = (ray.at(t) - sphere.center()).normalize();
-    //  return Color::from_vec3(n + Vec3::new(1.0, 1.0, 1.0), 255);
-    //}
     let mut t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
-    if t < 0.0 {
-      t = 0.0;
-    }
-    if t > 1.0 {
-      t = 1.0;
-    }
-    Color::from_vec3(
+    t = t.clamp(0.0, 1.0);
+    return Color::from_vec3(
       Vec3::lerp(t, &Vec3::new(0.5, 0.7, 1.0), &Vec3::new(1.0, 1.0, 1.0)),
       255,
-    )
+    );
   }
 }
