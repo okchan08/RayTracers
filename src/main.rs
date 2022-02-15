@@ -7,8 +7,9 @@ use ray_tracers::object::sphere::Sphere;
 use ray_tracers::scene::Scene;
 
 fn main() {
-    const WIDTH: u32 = 1920;
-    const HEIGHT: u32 = 1080;
+    const WIDTH: u32 = 680;
+    const HEIGHT: u32 = 460;
+    const SAMPLING: u32 = 100;
 
     let lookfrom = Vec3::new(12.0, 2.08, 2.0);
     let lookat = Vec3::new(0.0, 0.0, 0.0);
@@ -24,7 +25,7 @@ fn main() {
         dist_to_focus,
     );
 
-    let mut scene = Scene::new(camera, WIDTH, HEIGHT);
+    let mut scene = Scene::new(camera, WIDTH, HEIGHT, SAMPLING);
     scene.add_object(Box::new(Sphere::new(
         Vec3::new(0.0, 0.0, -1.0),
         0.5,
