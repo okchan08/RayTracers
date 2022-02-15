@@ -13,14 +13,17 @@ fn main() {
     const SAMPLING: u32 = 10;
     const MAX_SCATTER_DEPTH: u32 = 50;
 
+    let lookfrom = Vec3::new(0.0, -20.0, 3.0);
+    let lookat = Vec3::new(0.0, -1.0, 0.0);
+    let dist = (lookfrom - lookat).norm();
     let camera = Camera::new(
-        Vec3::new(0.0, -20.0, 3.0),       // lookfrom
-        Vec3::new(0.0, -1.0, 0.0),        // lookat
+        lookfrom,                         // lookfrom
+        lookat,                           // lookat
         Vec3::new(0.0, 1.0, -0.5),        // vup
         20.0,                             // vfov
         (WIDTH as f64) / (HEIGHT as f64), // aspect
         0.1,                              // aperture
-        10.0,                             // dist_to_focus
+        dist,                             // dist_to_focus
     );
 
     let mut scene = Scene::new(camera, WIDTH, HEIGHT, SAMPLING, MAX_SCATTER_DEPTH);
