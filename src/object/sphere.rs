@@ -29,33 +29,28 @@ impl Sphere {
 impl Shape for Sphere {
   fn hit(&self, ray: &Ray, lower_range: f64, upper_range: f64) -> Option<HitInfo> {
     let v_oc = ray.origin() - &self.center();
-    let a = ray.direction().dot(ray.direction());
-    let b = ray.direction().dot(&v_oc) * 2.0;
-    let c = v_oc.dot(&v_oc) - self.radius * self.radius;
-    let d = b * b - 4.0 * a * c;
+    let a = ray.direction().norm() * ray.direction().norm();
+    let half_b = v_oc.dot(&ray.direction());
+    //let b = ray.direction().dot(&v_oc) * 2.0;
+    let c = v_oc.norm() * v_oc.norm() - self.radius * self.radius;
+    let d = half_b * half_b - a * c;
 
     if d > 0.0 {
       let root = d.sqrt();
-      let mut temp = (-b - root) / (2.0 * a);
-      if temp < upper_range && temp > lower_range {
-        let pos = ray.at(temp);
-        return Some(HitInfo::new(
-          temp,
-          pos.clone(),
-          (pos - self.center()).dir(1.0 / self.radius),
-          self.material,
-        ));
+      let mut temp = (-half_b - root) / a;
+      if temp < lower_range || temp > upper_range {
+        temp = (-half_b + root) / a;
+        if temp < lower_range || temp > upper_range {
+          return None;
+        }
       }
-      temp = (-b + root) / (2.0 * a);
-      if temp < upper_range && temp > lower_range {
-        let pos = ray.at(temp);
-        return Some(HitInfo::new(
-          temp,
-          pos.clone(),
-          (pos - self.center()).dir(1.0 / self.radius),
-          self.material,
-        ));
-      }
+      let pos = ray.at(temp);
+      return Some(HitInfo::new(
+        temp,
+        pos.clone(),
+        (pos - self.center()).dir(1.0 / self.radius),
+        self.material,
+      ));
     }
     None
   }

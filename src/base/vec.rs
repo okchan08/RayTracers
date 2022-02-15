@@ -1,6 +1,6 @@
 use std::ops::{Add, Div, Mul, Sub};
 
-use crate::base::math::get_random;
+use crate::base::math::get_random_in_range;
 
 #[derive(Debug, Clone, Copy)]
 pub struct Vec3 {
@@ -35,9 +35,9 @@ impl Vec3 {
     //let mut rng = StdRng::seed_from_u64((unix_time & (std::u64::MAX - 1) as u128) as u64);
 
     Vec3 {
-      x: get_random(),
-      y: get_random(),
-      z: get_random(),
+      x: get_random_in_range(-1.0, 1.0),
+      y: get_random_in_range(-1.0, 1.0),
+      z: get_random_in_range(-1.0, 1.0),
     }
   }
 
@@ -45,7 +45,7 @@ impl Vec3 {
     let mut p: Vec3 = Vec3::new(1000.0, 0.0, 0.0);
     // 単位円の内部にある(=長さが1^2以下)のベクトルが生成されるまでサンプリング
     while p.norm() >= 1.0 {
-      p = Vec3::gen_random_vector() * 2.0 - Vec3::from_one(1.0);
+      p = Self::gen_random_vector();
     }
     p
   }

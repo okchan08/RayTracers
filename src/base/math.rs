@@ -11,7 +11,12 @@ where
 
 static RAND_GEN: Lazy<Mutex<StdRng>> = Lazy::new(|| Mutex::new(StdRng::seed_from_u64(125130568)));
 
-pub fn get_random() -> f64 {
+pub fn get_uniform_random() -> f64 {
   let x: f64 = RAND_GEN.lock().unwrap().gen();
+  x
+}
+
+pub fn get_random_in_range(lower: f64, upper: f64) -> f64 {
+  let x: f64 = RAND_GEN.lock().unwrap().gen_range(lower..upper);
   x
 }
