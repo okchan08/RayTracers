@@ -55,6 +55,14 @@ impl Vec3 {
     v.clone() - n.clone() * dot
   }
 
+  pub fn refract(uv: &Vec3, n: &Vec3, etai_over_etat: f64) -> Vec3 {
+    let cos_theta = (-uv.dot(n)).min(1.0);
+    let r_out_perp = (uv.clone() + (n.clone() * cos_theta)) * etai_over_etat;
+    let r_out_parallel =
+      n.clone() * (-1.0 * ((1.0 - r_out_perp.norm() * r_out_perp.norm()).abs().sqrt()));
+    r_out_perp + r_out_parallel
+  }
+
   pub fn near_zero(&self) -> bool {
     let eps = 1.0e-8;
     (self.x.abs() < eps) && (self.y.abs() < eps) && (self.z.abs() < eps)

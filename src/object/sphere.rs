@@ -45,12 +45,15 @@ impl Shape for Sphere {
         }
       }
       let pos = ray.at(temp);
-      return Some(HitInfo::new(
+      let mut hit_info = HitInfo::new(
         temp,
         pos.clone(),
-        (pos - self.center()).dir(1.0 / self.radius),
+        (pos.clone() - self.center()) / self.radius,
         self.material,
-      ));
+        &ray,
+      );
+      hit_info.set_front_face(&ray, &((pos.clone() - self.center()) / self.radius));
+      return Some(hit_info);
     }
     None
   }
@@ -78,6 +81,19 @@ impl Shape for Sphere {
           return Some((scatterd, albedo.clone()));
         }
         None
+      }
+      Material::Dielectric { refraction_index } => {
+        let attenuation = Vec3::from_one(1.0);
+        let refraction_ratio = if hit_info.front_face() {
+          1.0 / refraction_index
+        } else {
+          *refraction_index
+        };
+
+        let unit_dir = incoming_ray.direction().normalize();
+        let refracted = Vec3::refract(&unit_dir, &hit_info.get_normal(), refraction_ratio);
+        let scatterd = Ray::new(hit_info.get_poisition().clone(), refracted);
+        return Some((scatterd, attenuation));
       }
       _ => Some((
         Ray::new(Vec3::zero_vector(), Vec3::zero_vector()),

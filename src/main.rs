@@ -8,9 +8,9 @@ use ray_tracers::object::sphere::Sphere;
 use ray_tracers::scene::Scene;
 
 fn main() {
-    const WIDTH: u32 = 680;
-    const HEIGHT: u32 = 460;
-    const SAMPLING: u32 = 20;
+    const WIDTH: u32 = 1080;
+    const HEIGHT: u32 = 720;
+    const SAMPLING: u32 = 100;
     const MAX_SCATTER_DEPTH: u32 = 50;
 
     let lookfrom = Vec3::new(0.0, -20.0, 3.0);
@@ -45,12 +45,29 @@ fn main() {
         },
     )));
     scene.add_object(Box::new(Sphere::new(
-        Vec3::new(-4.0, 0.0, 0.5),
-        1.0,
-        "sphere 2".to_string(),
+        Vec3::new(-3.5, 2.0, 0.15),
+        0.3,
+        "sphere 3".to_string(),
         Material::Metal {
             albedo: Vec3::new(0.0, 0.3, 0.8),
             fuzzy: 0.1,
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-3.0, 1.0, 0.75),
+        1.5,
+        "sphere 4".to_string(),
+        Material::Dielectric {
+            refraction_index: 1.5,
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-2.5, 4.0, 0.15),
+        0.3,
+        "sphere 5".to_string(),
+        Material::Metal {
+            albedo: Vec3::new(0.8, 0.1, 0.1),
+            fuzzy: 0.0,
         },
     )));
     scene.add_object(Box::new(Sphere::new(

@@ -4,5 +4,6 @@ use crate::base::vec::Vec3;
 pub enum Material {
   Lambertian { albedo: Vec3 },
   Metal { albedo: Vec3, fuzzy: f64 },
+  Dielectric { refraction_index: f64 },
   Black,
 }
