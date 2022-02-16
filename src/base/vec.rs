@@ -50,6 +50,11 @@ impl Vec3 {
     p
   }
 
+  pub fn near_zero(&self) -> bool {
+    let eps = 1.0e-8;
+    (self.x.abs() < eps) && (self.y.abs() < eps) && (self.z.abs() < eps)
+  }
+
   pub fn norm(&self) -> f64 {
     (self.x * self.x + self.y * self.y + self.z * self.z).sqrt()
   }
