@@ -55,7 +55,7 @@ impl Shape for Sphere {
     None
   }
 
-  fn scatter(&self, hit_info: &HitInfo) -> (Ray, Vec3, bool) {
+  fn scatter(&self, hit_info: &HitInfo) -> Option<(Ray, Vec3)> {
     match hit_info.get_hit_material() {
       Material::Lambertian { albedo } => {
         let target = hit_info.get_normal().clone()
@@ -66,13 +66,12 @@ impl Shape for Sphere {
           hit_info.get_poisition().clone(),
           target - hit_info.get_poisition().clone(),
         );
-        return (scattered, albedo.clone(), true);
+        return Some((scattered, albedo.clone()));
       }
-      _ => (
+      _ => Some((
         Ray::new(Vec3::zero_vector(), Vec3::zero_vector()),
         Vec3::zero_vector(),
-        false,
-      ),
+      )),
     }
   }
 
