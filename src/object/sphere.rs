@@ -68,11 +68,11 @@ impl Shape for Sphere {
         let scattered = Ray::new(hit_info.get_poisition().clone(), scatter_dir);
         return Some((scattered, albedo.clone()));
       }
-      Material::Metal { albedo } => {
+      Material::Metal { albedo, fuzzy } => {
         let reflected = Vec3::reflect(
           &incoming_ray.direction().normalize(),
           &hit_info.get_normal(),
-        );
+        ) + Vec3::gen_random_vector_in_unit_shpere() * fuzzy.clamp(0.0, 1.0);
         let scatterd = Ray::new(hit_info.get_poisition().clone(), reflected);
         if scatterd.direction().dot(hit_info.get_normal()) > 0.0 {
           return Some((scatterd, albedo.clone()));
