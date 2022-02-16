@@ -31,7 +31,7 @@ fn main() {
         Vec3::new(0.0, 1.0, 0.75),
         1.5,
         "sphere 1".to_string(),
-        Material::Metal {
+        Material::Lambertian {
             albedo: Vec3::new(0.9, 0.7, 0.4),
         },
     )));
@@ -39,8 +39,16 @@ fn main() {
         Vec3::new(2.0, 0.0, 0.4),
         0.8,
         "sphere 2".to_string(),
-        Material::Lambertian {
+        Material::Metal {
             albedo: Vec3::new(0.7, 0.3, 0.3),
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-4.0, 0.0, 0.5),
+        1.0,
+        "sphere 2".to_string(),
+        Material::Metal {
+            albedo: Vec3::new(0.0, 0.3, 0.8),
         },
     )));
     scene.add_object(Box::new(Sphere::new(

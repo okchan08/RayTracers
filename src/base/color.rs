@@ -57,4 +57,17 @@ impl Color {
       a: alpha,
     }
   }
+
+  pub fn from_vec3_gamma(from: Vec3, alpha: u8, gamma_factor: f64) -> Self {
+    let inv_gamma_factor = 1.0 / gamma_factor;
+    let x = from.get_x().powf(inv_gamma_factor);
+    let y = from.get_y().powf(inv_gamma_factor);
+    let z = from.get_z().powf(inv_gamma_factor);
+    Color {
+      r: (x.clamp(0.0, 0.999) * 256.0) as u8,
+      g: (y.clamp(0.0, 0.999) * 256.0) as u8,
+      b: (z.clamp(0.0, 0.999) * 256.0) as u8,
+      a: alpha,
+    }
+  }
 }

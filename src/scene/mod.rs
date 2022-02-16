@@ -70,7 +70,7 @@ impl Scene {
           col = col + c;
         }
         col = col / (self.super_samples as f64);
-        buf[(i + j * self.width) as usize] = Color::from_vec3(col, 255).to_u32();
+        buf[(i + j * self.width) as usize] = Color::from_vec3_gamma(col, 255, 2.2).to_u32();
       }
     }
     BufferWrapper(buf)
