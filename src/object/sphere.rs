@@ -55,17 +55,29 @@ impl Shape for Sphere {
     None
   }
 
-  fn scatter(&self, hit_info: &HitInfo) -> Option<(Ray, Vec3)> {
+  fn scatter(&self, incoming_ray: &Ray, hit_info: &HitInfo) -> Option<(Ray, Vec3)> {
     match hit_info.get_hit_material() {
       Material::Lambertian { albedo } => {
-        let mut scatter_dir =
-          hit_info.get_normal().clone() + Vec3::gen_random_vector_in_unit_shpere();
+        //let mut scatter_dir =
+        //  hit_info.get_normal().clone() + Vec3::gen_random_vector_in_unit_shpere().normalize();
+        let mut scatter_dir = Vec3::gen_random_vector_in_unit_shpere().normalize();
         if scatter_dir.near_zero() {
           scatter_dir = hit_info.get_normal().clone();
         }
 
         let scattered = Ray::new(hit_info.get_poisition().clone(), scatter_dir);
         return Some((scattered, albedo.clone()));
+      }
+      Material::Metal { albedo } => {
+        let reflected = Vec3::reflect(
+          &incoming_ray.direction().normalize(),
+          &hit_info.get_normal(),
+        );
+        let scatterd = Ray::new(hit_info.get_poisition().clone(), reflected);
+        if scatterd.direction().dot(hit_info.get_normal()) > 0.0 {
+          return Some((scatterd, albedo.clone()));
+        }
+        None
       }
       _ => Some((
         Ray::new(Vec3::zero_vector(), Vec3::zero_vector()),

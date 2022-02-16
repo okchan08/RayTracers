@@ -31,8 +31,8 @@ fn main() {
         Vec3::new(0.0, 1.0, 0.75),
         1.5,
         "sphere 1".to_string(),
-        Material::Lambertian {
-            albedo: Vec3::from_one(0.5),
+        Material::Metal {
+            albedo: Vec3::new(0.9, 0.7, 0.4),
         },
     )));
     scene.add_object(Box::new(Sphere::new(
@@ -40,7 +40,7 @@ fn main() {
         0.8,
         "sphere 2".to_string(),
         Material::Lambertian {
-            albedo: Vec3::from_one(0.9),
+            albedo: Vec3::new(0.7, 0.3, 0.3),
         },
     )));
     scene.add_object(Box::new(Sphere::new(
@@ -48,7 +48,7 @@ fn main() {
         100.5,
         "floor".to_string(),
         Material::Lambertian {
-            albedo: Vec3::from_one(1.0),
+            albedo: Vec3::new(0.8, 0.8, 0.0),
         },
     )));
     let buf = scene.render();

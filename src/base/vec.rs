@@ -50,6 +50,11 @@ impl Vec3 {
     p
   }
 
+  pub fn reflect(v: &Vec3, n: &Vec3) -> Vec3 {
+    let dot = 2.0 * v.dot(n);
+    v.clone() - n.clone() * dot
+  }
+
   pub fn near_zero(&self) -> bool {
     let eps = 1.0e-8;
     (self.x.abs() < eps) && (self.y.abs() < eps) && (self.z.abs() < eps)
@@ -167,6 +172,17 @@ impl Mul<f64> for Vec3 {
       x: self.x * other,
       y: self.y * other,
       z: self.z * other,
+    }
+  }
+}
+
+impl Mul<Vec3> for Vec3 {
+  type Output = Vec3;
+  fn mul(self, other: Vec3) -> Self::Output {
+    Vec3 {
+      x: self.x * other.x,
+      y: self.y * other.y,
+      z: self.z * other.z,
     }
   }
 }

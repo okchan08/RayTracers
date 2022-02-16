@@ -79,14 +79,10 @@ impl Scene {
   fn gen_color(&self, ray: &Ray, shapes: &Vec<Box<dyn Shape>>, depth: u32) -> Vec3 {
     for shape in shapes.iter() {
       if let Some(hit_info) = shape.hit(ray, 0.001, std::f64::MAX) {
-        if let Some((scattered, attenuation)) = shape.scatter(&hit_info) {
+        if let Some((scattered, attenuation)) = shape.scatter(&ray, &hit_info) {
           if depth < self.max_scatter_depth {
             let c = self.gen_color(&scattered, shapes, depth + 1);
-            return Vec3::new(
-              attenuation.get_x() * c.get_x(),
-              attenuation.get_y() * c.get_y(),
-              attenuation.get_z() * c.get_z(),
-            );
+            return c * attenuation;
           }
         }
         //return (hit_info.get_normal().clone() + Vec3::new(1.0, 1.0, 1.0)).dir(0.5);

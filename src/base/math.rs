@@ -9,7 +9,14 @@ where
   v.max(min).min(max)
 }
 
-static RAND_GEN: Lazy<Mutex<StdRng>> = Lazy::new(|| Mutex::new(StdRng::seed_from_u64(125130568)));
+static RAND_GEN: Lazy<Mutex<StdRng>> = Lazy::new(|| {
+  let now = std::time::SystemTime::now();
+  let unixtime = now
+    .duration_since(std::time::SystemTime::UNIX_EPOCH)
+    .expect("back to the future")
+    .as_nanos();
+  Mutex::new(StdRng::seed_from_u64(unixtime as u64))
+});
 
 pub fn get_uniform_random() -> f64 {
   let x: f64 = RAND_GEN.lock().unwrap().gen();
