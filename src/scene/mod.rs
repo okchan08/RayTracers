@@ -4,8 +4,9 @@ use crate::object::camera::Camera;
 use crate::object::ray::Ray;
 use crate::object::shape::Shape;
 
+use rayon::prelude::*;
+
 use std::borrow::Borrow;
-use std::cell::RefCell;
 
 pub struct BufferWrapper(Vec<u32>);
 
@@ -22,7 +23,7 @@ pub struct Scene {
   height: u32,
   super_samples: u32,
   max_scatter_depth: u32,
-  objects: RefCell<Vec<Box<dyn Shape>>>,
+  objects: Vec<Box<dyn Shape>>,
 }
 
 impl Scene {
@@ -40,7 +41,7 @@ impl Scene {
       height: height,
       super_samples: super_samples,
       max_scatter_depth: max_scatter_depth,
-      objects: RefCell::new(vec![]),
+      objects: vec![],
     }
   }
 
@@ -53,26 +54,26 @@ impl Scene {
   }
 
   pub fn add_object(&mut self, object: Box<dyn Shape>) {
-    self.objects.borrow_mut().push(object);
+    self.objects.push(object);
   }
 
   pub fn render(&self) -> BufferWrapper {
     let mut buf = vec![0u32; (self.width * self.height) as usize];
 
-    for i in 0..self.width {
-      for j in 0..self.height {
-        let mut col = Vec3::new(0.0, 0.0, 0.0);
-        for _ in 0..self.super_samples {
-          let u = (i as f64) / (self.width as f64);
-          let v = (j as f64) / (self.height as f64);
-          let ray = self.camera.get_ray(u, v);
-          let c = self.gen_color(&ray, &self.objects.borrow(), 0);
-          col = col + c;
-        }
-        col = col / (self.super_samples as f64);
-        buf[(i + j * self.width) as usize] = Color::from_vec3_gamma(col, 255, 2.2).to_u32();
+    buf.par_iter_mut().enumerate().for_each(|(i, pixel)| {
+      let y = ((i as u64) / (self.width as u64)) as f64;
+      let x = (i as f64) - y * (self.width as f64);
+      let u = (x as f64) / (self.width as f64);
+      let v = (y as f64) / (self.height as f64);
+      let mut col = Vec3::from_one(0.0);
+      for _ in 0..self.super_samples {
+        let ray = self.camera.get_ray(u, v);
+        let c = self.gen_color(&ray, &self.objects.borrow(), 0);
+        col = col + c;
       }
-    }
+      col = col / self.super_samples as f64;
+      *pixel = Color::from_vec3_gamma(col, 255, 2.2).to_u32();
+    });
     BufferWrapper(buf)
   }
 
