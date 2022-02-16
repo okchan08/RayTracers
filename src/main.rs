@@ -3,55 +3,82 @@ use std::path::Path;
 
 use ray_tracers::base::vec::Vec3;
 use ray_tracers::object::camera::Camera;
-use ray_tracers::object::ray::Ray;
+use ray_tracers::object::material::Material;
 use ray_tracers::object::sphere::Sphere;
-
-struct BufferWrapper(Vec<u32>);
-
-impl Borrow<[u8]> for BufferWrapper {
-    fn borrow(&self) -> &[u8] {
-        unsafe { std::slice::from_raw_parts(self.0.as_ptr() as *const u8, self.0.len() * 4) }
-    }
-}
+use ray_tracers::scene::Scene;
 
 fn main() {
-    const WIDTH: u32 = 1920;
-    const HEIGHT: u32 = 1080;
+    const WIDTH: u32 = 1080;
+    const HEIGHT: u32 = 720;
+    const SAMPLING: u32 = 100;
+    const MAX_SCATTER_DEPTH: u32 = 50;
 
-    let vec_x = Vec3::new(4.0, 0.0, 0.0);
-    let vec_y = Vec3::new(0.0, 2.0, 0.0);
-    let vec_z = Vec3::new(-2.0, -1.0, -1.0);
-    let lookfrom = Vec3::new(12.0, 2.08, 2.0);
-    let lookat = Vec3::new(0.0, 0.0, 0.0);
-    let dist_to_focus: f64 = 10.0;
-    let aperture: f64 = 0.1;
+    let lookfrom = Vec3::new(0.0, -20.0, 3.0);
+    let lookat = Vec3::new(0.0, -1.0, 0.0);
+    let dist = (lookfrom - lookat).norm();
     let camera = Camera::new(
-        lookfrom,
-        lookat,
-        Vec3::new(0.0, 1.0, 0.0),
-        20.0,
-        (WIDTH as f64) / (HEIGHT as f64),
-        aperture,
-        dist_to_focus,
+        lookfrom,                         // lookfrom
+        lookat,                           // lookat
+        Vec3::new(0.0, 1.0, -0.5),        // vup
+        20.0,                             // vfov
+        (WIDTH as f64) / (HEIGHT as f64), // aspect
+        0.1,                              // aperture
+        dist,                             // dist_to_focus
     );
 
-    let sphere = Sphere::new(Vec3::new(0.0, 0.0, -1.0), 0.5);
-    let mut buf = BufferWrapper(vec![0u32; (WIDTH * HEIGHT) as usize]);
-
-    for j in 0..HEIGHT {
-        for i in 0..WIDTH {
-            let u = (i as f64) / (WIDTH as f64);
-            let v = (j as f64) / (HEIGHT as f64);
-            let ray = camera.get_ray(u, v);
-            let col = gen_color(&ray, &sphere);
-            buf.0[(i + j * WIDTH) as usize] = rgba_to_u32(
-                (col.get_x() * 255.0) as u8,
-                (col.get_y() * 255.0) as u8,
-                (col.get_z() * 255.0) as u8,
-                0xFF,
-            );
-        }
-    }
+    let mut scene = Scene::new(camera, WIDTH, HEIGHT, SAMPLING, MAX_SCATTER_DEPTH);
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(0.0, 1.0, 0.75),
+        1.5,
+        "sphere 1".to_string(),
+        Material::Lambertian {
+            albedo: Vec3::new(0.9, 0.7, 0.4),
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(2.0, 0.0, 0.4),
+        0.8,
+        "sphere 2".to_string(),
+        Material::Metal {
+            albedo: Vec3::new(0.7, 0.3, 0.3),
+            fuzzy: 0.0,
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-3.5, 2.0, 0.15),
+        0.3,
+        "sphere 3".to_string(),
+        Material::Metal {
+            albedo: Vec3::new(0.0, 0.3, 0.8),
+            fuzzy: 0.1,
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-3.0, 1.0, 0.75),
+        1.5,
+        "sphere 4".to_string(),
+        Material::Dielectric {
+            refraction_index: 1.5,
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(-2.5, 4.0, 0.15),
+        0.3,
+        "sphere 5".to_string(),
+        Material::Metal {
+            albedo: Vec3::new(0.8, 0.1, 0.1),
+            fuzzy: 0.0,
+        },
+    )));
+    scene.add_object(Box::new(Sphere::new(
+        Vec3::new(0.0, 0.0, -100.0),
+        100.5,
+        "floor".to_string(),
+        Material::Lambertian {
+            albedo: Vec3::new(0.8, 0.8, 0.0),
+        },
+    )));
+    let buf = scene.render();
 
     image::save_buffer(
         &Path::new("test.png"),
@@ -61,38 +88,4 @@ fn main() {
         image::ColorType::Rgba8,
     )
     .expect("here");
-}
-
-fn rgba_to_u32(red: u8, green: u8, blue: u8, alpha: u8) -> u32 {
-    let a = (alpha as u32) << 24;
-    let r = (red as u32) << 16;
-    let g = (green as u32) << 8;
-    let b = blue as u32;
-    a | r | g | b
-}
-
-fn gen_color(ray: &Ray, sphere: &Sphere) -> Vec3 {
-    let t = sphere.hit_sphere(ray);
-    if t > 0.0 {
-        let n = (ray.at(t) - sphere.center()).normalize();
-        return (n + Vec3::new(1.0, 1.0, 1.0)).dir(0.5);
-    }
-    let mut t: f64 = 0.5f64 * (ray.direction().get_y() + 1.0_f64);
-    if t < 0.0 {
-        t = 0.0;
-    }
-    if t > 1.0 {
-        t = 1.0;
-    }
-    Vec3::lerp(t, &Vec3::new(0.5, 0.7, 1.0), &Vec3::new(1.0, 1.0, 1.0))
-}
-
-#[test]
-fn test_rgb_to_u32() {
-    assert_eq!(
-        rgba_to_u32(123, 45, 24, 255),
-        0xFF << 24 | (0x7B2D18 as u32)
-    );
-    assert_eq!(rgba_to_u32(4, 234, 97, 0), 0x04EA61);
-    assert_eq!(rgba_to_u32(255, 255, 255, 255), u32::MAX);
 }

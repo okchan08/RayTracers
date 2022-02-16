@@ -1,1 +1,2 @@
-pub mod vec;
+pub mod color;
+pub mod math;pub mod vec;
