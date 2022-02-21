@@ -5,7 +5,12 @@ use ray_tracers::config::config::Config;
 use ray_tracers::scene::Scene;
 
 fn main() {
-    let config = Config::from_yaml(Path::new("./example_yaml/example001.yaml")).unwrap();
+    let args: Vec<String> = std::env::args().collect();
+    if args.len() < 2 {
+        println!("Usage: {} <config.yaml>", args[0]);
+        return;
+    }
+    let config = Config::from_yaml(Path::new(args[1].as_str())).unwrap();
     let scene = Scene::build_from_config(&config);
     let buf = scene.render();
 

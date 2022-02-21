@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 
+use crate::base::math::{get_random_in_range, get_uniform_random};
 use crate::base::vec::Vec3;
 use crate::object::material::Material;
 use crate::object::shape::Shape;
@@ -26,14 +27,14 @@ pub struct CameraConfig {
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ObjectConfig {
-  #[serde(rename(deserialize = "sphere"))]
+  #[serde(rename(serialize = "sphere", deserialize = "sphere"))]
   Sphere {
     center: (f64, f64, f64),
     radius: f64,
     name: String,
     material: MaterialConfig,
   },
-  #[serde(rename(deserialize = "box"))]
+  #[serde(rename(serialize = "box", deserialize = "box"))]
   Box {
     left: (f64, f64, f64),
     right: (f64, f64, f64),
@@ -44,11 +45,11 @@ pub enum ObjectConfig {
 
 #[derive(Debug, Serialize, Deserialize, Clone, Copy)]
 pub enum MaterialConfig {
-  #[serde(rename(deserialize = "lambertian"))]
+  #[serde(rename(serialize = "lambertian", deserialize = "lambertian"))]
   Lambertian { albedo: (f64, f64, f64) },
-  #[serde(rename(deserialize = "metal"))]
+  #[serde(rename(serialize = "metal", deserialize = "metal"))]
   Metal { albedo: (f64, f64, f64), fuzzy: f64 },
-  #[serde(rename(deserialize = "dielectric"))]
+  #[serde(rename(serialize = "dielectric", deserialize = "dielectric"))]
   Dielectric { refraction_index: f64 },
 }
 
@@ -86,6 +87,65 @@ impl ObjectConfig {
       }
     }
   }
+
+  pub fn gen_random() -> Vec<ObjectConfig> {
+    let mut ret = vec![];
+    for a in -11..11 {
+      for b in -11..11 {
+        let choose_material = get_uniform_random();
+        let radius = 0.3;
+        let center = Vec3::new(
+          (a as f64) * 1.5 + 0.9 * get_uniform_random(),
+          (b as f64) * 1.5 + 0.9 * get_uniform_random(),
+          radius / 2.0,
+        );
+        let name = format!("sphere {}{}", a, b);
+        if (center - Vec3::new(4.0, 0.0, radius / 2.0)).norm() > 0.9 {
+          if choose_material < 0.33 {
+            let albedo = Vec3::new(
+              get_random_in_range(0.0, 0.99),
+              get_random_in_range(0.0, 0.99),
+              get_random_in_range(0.0, 0.99),
+            );
+            ret.push(ObjectConfig::Sphere {
+              center: center.to_tuple(),
+              radius: radius,
+              name: name,
+              material: MaterialConfig::Lambertian {
+                albedo: albedo.to_tuple(),
+              },
+            });
+          } else if choose_material < 0.666 {
+            let albedo = Vec3::new(
+              get_random_in_range(0.5, 0.99),
+              get_random_in_range(0.5, 0.99),
+              get_random_in_range(0.5, 0.99),
+            );
+            let fuzzy = get_random_in_range(0.0, 0.5);
+            ret.push(ObjectConfig::Sphere {
+              center: center.to_tuple(),
+              radius: radius,
+              name: name,
+              material: MaterialConfig::Metal {
+                albedo: albedo.to_tuple(),
+                fuzzy: fuzzy,
+              },
+            });
+          } else {
+            ret.push(ObjectConfig::Sphere {
+              center: center.to_tuple(),
+              radius: radius,
+              name: name,
+              material: MaterialConfig::Dielectric {
+                refraction_index: 1.5,
+              },
+            });
+          }
+        }
+      }
+    }
+    ret
+  }
 }
 
 impl MaterialConfig {
@@ -102,5 +162,19 @@ impl MaterialConfig {
         refraction_index: *refraction_index,
       },
     }
+  }
+}
+
+#[cfg(test)]
+mod test {
+  use super::*;
+  use serde_yaml;
+  #[test]
+  fn test_object_gen_random() {
+    let objects = ObjectConfig::gen_random();
+    let str = serde_yaml::to_string(&objects);
+    assert_eq!(objects.len() > 0, true);
+    assert_eq!(str.is_ok(), true);
+    println!("{}", str.unwrap());
   }
 }
