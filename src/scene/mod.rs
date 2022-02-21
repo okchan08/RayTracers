@@ -1,5 +1,7 @@
 use crate::base::color::{Color, WHITE};
 use crate::base::vec::Vec3;
+use crate::config::config::Config;
+use crate::config::scene_config::CameraConfig;
 use crate::object::camera::Camera;
 use crate::object::ray::Ray;
 use crate::object::shape::Shape;
@@ -41,6 +43,31 @@ impl Scene {
       super_samples: super_samples,
       max_scatter_depth: max_scatter_depth,
       objects: RefCell::new(vec![]),
+    }
+  }
+
+  pub fn build_from_config(config: &Config) -> Self {
+    let camera = if config.scene_config().camera_config.is_some() {
+      Camera::build_from_config(&config.scene_config().camera_config.as_ref().unwrap())
+    } else {
+      Camera::build_from_config(&CameraConfig::default())
+    };
+
+    let render_config = config.render_config();
+    let objects = config
+      .scene_config()
+      .objects
+      .iter()
+      .map(|o| o.to_object())
+      .collect();
+    Scene {
+      camera: camera,
+      background_color: WHITE,
+      width: render_config.width,
+      height: render_config.height,
+      super_samples: render_config.sampling,
+      max_scatter_depth: render_config.max_scatter_depth,
+      objects: RefCell::new(objects),
     }
   }
 

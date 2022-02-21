@@ -1,5 +1,6 @@
 use crate::base::math::get_random_in_range;
 use crate::base::vec::Vec3;
+use crate::config::scene_config::CameraConfig;
 use crate::object::ray::Ray;
 
 // カメラ(=視界)を表す構造体
@@ -56,6 +57,18 @@ impl Camera {
       vertical: vertical,
       lense_radius: lense_radius,
     }
+  }
+
+  pub fn build_from_config(config: &CameraConfig) -> Self {
+    Self::new(
+      Vec3::from_tuple(config.lookfrom),
+      Vec3::from_tuple(config.lookat),
+      Vec3::from_tuple(config.vup),
+      config.vofv,
+      config.aspect,
+      config.aperture,
+      config.distance_to_focus,
+    )
   }
 
   pub fn get_ray(&self, s: f64, t: f64) -> Ray {

@@ -93,6 +93,14 @@ impl Vec3 {
     (self.x, self.y, self.z)
   }
 
+  pub fn from_tuple(value: (f64, f64, f64)) -> Self {
+    Vec3 {
+      x: value.0,
+      y: value.1,
+      z: value.2,
+    }
+  }
+
   pub fn dot(&self, other: &Self) -> f64 {
     self.x * other.x + self.y * other.y + self.z * other.z
   }
