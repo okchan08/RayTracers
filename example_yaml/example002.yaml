@@ -1,0 +1,5993 @@
+output_name:
+  "./sample_random.png"
+render:
+  width: 1920
+  height: 1080
+  sampling: 500
+  max_scatter_depth: 50
+scene:
+  camera:
+    lookfrom: [0.0, -25.0, 2.0]
+    lookat: [0.0, -1.0, 0.0]
+    vup: [0.0, 1.0, -0.5]
+    vofv: 20.0
+    aspect: 1.4783
+    aperture: 0.1
+    distance_to_focus: 19.10 #distance between lookfrom and lookat
+  objects:
+    - sphere:
+        name: "sphere 1"
+        center: [0.0, 0.0, 0.75]
+        radius: 1.5
+        material:
+          metal:
+            albedo: [0.7, 0.3, 0.3]
+            fuzzy: 0.0
+    - sphere:
+        name: "sphere 2"
+        center: [3.5, 0.0, 0.75]
+        radius: 1.5
+        material:
+          lambertian:
+            albedo: [0.9, 0.7, 0.4]
+    - sphere:
+        name: "sphere 3"
+        center: [-3.5, 0.0, 0.75]
+        radius: 1.5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -15.945377565823152
+          - -15.879185686587084
+          - 0.15
+        radius: 0.3
+        name: sphere -11-11
+        material:
+          lambertian:
+            albedo:
+              - 0.24371298348530762
+              - 0.6177938426709475
+              - 0.3657233155264899
+    - sphere:
+        center:
+          - -15.656332277787426
+          - -14.247917154066176
+          - 0.15
+        radius: 0.3
+        name: sphere -11-10
+        material:
+          lambertian:
+            albedo:
+              - 0.5485073750752982
+              - 0.5208502574763848
+              - 0.8450302921298615
+    - sphere:
+        center:
+          - -16.32023327303366
+          - -13.039158060726123
+          - 0.15
+        radius: 0.3
+        name: sphere -11-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -15.674261193126792
+          - -11.414563095885978
+          - 0.15
+        radius: 0.3
+        name: sphere -11-8
+        material:
+          lambertian:
+            albedo:
+              - 0.18459103658067144
+              - 0.3040633348780856
+              - 0.3839555563480066
+    - sphere:
+        center:
+          - -15.830397152844373
+          - -10.18328399247043
+          - 0.15
+        radius: 0.3
+        name: sphere -11-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.271389407220106
+          - -8.589913856022783
+          - 0.15
+        radius: 0.3
+        name: sphere -11-6
+        material:
+          lambertian:
+            albedo:
+              - 0.5400475001143946
+              - 0.9453575053848354
+              - 0.506503794370842
+    - sphere:
+        center:
+          - -15.912011924514685
+          - -6.925647531471696
+          - 0.15
+        radius: 0.3
+        name: sphere -11-5
+        material:
+          metal:
+            albedo:
+              - 0.7660310976601797
+              - 0.5101544923497793
+              - 0.979326700572716
+            fuzzy: 0.08715714999472579
+    - sphere:
+        center:
+          - -16.4675043915881
+          - -5.742652007527591
+          - 0.15
+        radius: 0.3
+        name: sphere -11-4
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.32075734037191
+          - -4.4012265234853105
+          - 0.15
+        radius: 0.3
+        name: sphere -11-3
+        material:
+          metal:
+            albedo:
+              - 0.6783608943794592
+              - 0.8325164516499826
+              - 0.5547629029558546
+            fuzzy: 0.25955609285342174
+    - sphere:
+        center:
+          - -16.017934639309743
+          - -2.5162441182901856
+          - 0.15
+        radius: 0.3
+        name: sphere -11-2
+        material:
+          metal:
+            albedo:
+              - 0.5990121472332128
+              - 0.9495729069743283
+              - 0.91412352653726
+            fuzzy: 0.05521155042104775
+    - sphere:
+        center:
+          - -16.14917428801071
+          - -1.0444192464763744
+          - 0.15
+        radius: 0.3
+        name: sphere -11-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.180689018864296
+          - 0.48743842368739826
+          - 0.15
+        radius: 0.3
+        name: sphere -110
+        material:
+          metal:
+            albedo:
+              - 0.9493950591662278
+              - 0.7868047209350475
+              - 0.8508406488894673
+            fuzzy: 0.2824413160317022
+    - sphere:
+        center:
+          - -16.257877267852667
+          - 1.79381107595204
+          - 0.15
+        radius: 0.3
+        name: sphere -111
+        material:
+          lambertian:
+            albedo:
+              - 0.6515283651514432
+              - 0.822099470143081
+              - 0.9529796903222845
+    - sphere:
+        center:
+          - -16.116040277613454
+          - 3.8220132302938277
+          - 0.15
+        radius: 0.3
+        name: sphere -112
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.01907090817312
+          - 4.579254732932236
+          - 0.15
+        radius: 0.3
+        name: sphere -113
+        material:
+          lambertian:
+            albedo:
+              - 0.5399189489914388
+              - 0.5081370681228378
+              - 0.040458291446234404
+    - sphere:
+        center:
+          - -16.148696576514606
+          - 6.162271831514167
+          - 0.15
+        radius: 0.3
+        name: sphere -114
+        material:
+          metal:
+            albedo:
+              - 0.6754857551401383
+              - 0.8216309229943038
+              - 0.8646216797699755
+            fuzzy: 0.009932238820807071
+    - sphere:
+        center:
+          - -16.03891994003064
+          - 7.579231558426207
+          - 0.15
+        radius: 0.3
+        name: sphere -115
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -15.752875374381885
+          - 9.056067524054543
+          - 0.15
+        radius: 0.3
+        name: sphere -116
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.05548723933234
+          - 10.711897361675877
+          - 0.15
+        radius: 0.3
+        name: sphere -117
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.150819073114945
+          - 12.033841552708568
+          - 0.15
+        radius: 0.3
+        name: sphere -118
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -16.165323069174352
+          - 13.684580966475648
+          - 0.15
+        radius: 0.3
+        name: sphere -119
+        material:
+          metal:
+            albedo:
+              - 0.9318650235511765
+              - 0.5229717067258598
+              - 0.5655660381965185
+            fuzzy: 0.25313093472477755
+    - sphere:
+        center:
+          - -16.130884873205776
+          - 15.413458853762204
+          - 0.15
+        radius: 0.3
+        name: sphere -1110
+        material:
+          lambertian:
+            albedo:
+              - 0.3881995685310844
+              - 0.9657550530123689
+              - 0.6284525817199756
+    - sphere:
+        center:
+          - -14.407157771754942
+          - -15.622230232839966
+          - 0.15
+        radius: 0.3
+        name: sphere -10-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -14.10223742737761
+          - -14.129294695208245
+          - 0.15
+        radius: 0.3
+        name: sphere -10-10
+        material:
+          metal:
+            albedo:
+              - 0.5176953747451931
+              - 0.8460048687939661
+              - 0.5026375381626174
+            fuzzy: 0.4879040533251231
+    - sphere:
+        center:
+          - -14.170733735413581
+          - -13.470821510171083
+          - 0.15
+        radius: 0.3
+        name: sphere -10-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -14.871219280887766
+          - -11.219647958771636
+          - 0.15
+        radius: 0.3
+        name: sphere -10-8
+        material:
+          metal:
+            albedo:
+              - 0.9163872715667254
+              - 0.5818942787391777
+              - 0.8314802725966128
+            fuzzy: 0.21002459843825394
+    - sphere:
+        center:
+          - -14.897192147500876
+          - -10.401849328947053
+          - 0.15
+        radius: 0.3
+        name: sphere -10-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -14.180258598752419
+          - -8.29640172148994
+          - 0.15
+        radius: 0.3
+        name: sphere -10-6
+        material:
+          lambertian:
+            albedo:
+              - 0.7433027070115513
+              - 0.5962995952092766
+              - 0.0003533352271450374
+    - sphere:
+        center:
+          - -14.644085278929941
+          - -7.304382093782349
+          - 0.15
+        radius: 0.3
+        name: sphere -10-5
+        material:
+          metal:
+            albedo:
+              - 0.7889364963544159
+              - 0.6229114575267667
+              - 0.9558765887490382
+            fuzzy: 0.1699573287915539
+    - sphere:
+        center:
+          - -14.882963574353088
+          - -5.377774338882911
+          - 0.15
+        radius: 0.3
+        name: sphere -10-4
+        material:
+          lambertian:
+            albedo:
+              - 0.6410059930300335
+              - 0.5135716989997366
+              - 0.49989320260301673
+    - sphere:
+        center:
+          - -14.487244916194157
+          - -3.902860053919811
+          - 0.15
+        radius: 0.3
+        name: sphere -10-3
+        material:
+          lambertian:
+            albedo:
+              - 0.19205092760577974
+              - 0.5196872550588829
+              - 0.14924628405637172
+    - sphere:
+        center:
+          - -14.458841562386386
+          - -2.4000834555993302
+          - 0.15
+        radius: 0.3
+        name: sphere -10-2
+        material:
+          metal:
+            albedo:
+              - 0.6219759172595162
+              - 0.5341827885483248
+              - 0.7828259347295872
+            fuzzy: 0.17025896926441553
+    - sphere:
+        center:
+          - -14.52243651401825
+          - -0.7127796260827862
+          - 0.15
+        radius: 0.3
+        name: sphere -10-1
+        material:
+          lambertian:
+            albedo:
+              - 0.859348934622181
+              - 0.19463362269845297
+              - 0.14464883964334602
+    - sphere:
+        center:
+          - -14.615450746714936
+          - 0.7118334478962802
+          - 0.15
+        radius: 0.3
+        name: sphere -100
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -14.615607714734512
+          - 1.8068488225959056
+          - 0.15
+        radius: 0.3
+        name: sphere -101
+        material:
+          lambertian:
+            albedo:
+              - 0.7392113413597612
+              - 0.34733346675938676
+              - 0.12481190494264588
+    - sphere:
+        center:
+          - -14.350308147160657
+          - 3.026048841086761
+          - 0.15
+        radius: 0.3
+        name: sphere -102
+        material:
+          metal:
+            albedo:
+              - 0.6317652778868517
+              - 0.6096415532084161
+              - 0.817571329358306
+            fuzzy: 0.12086646647684318
+    - sphere:
+        center:
+          - -14.581179145777652
+          - 4.798154509015651
+          - 0.15
+        radius: 0.3
+        name: sphere -103
+        material:
+          metal:
+            albedo:
+              - 0.6594786906208748
+              - 0.8251849766299354
+              - 0.6272897592255986
+            fuzzy: 0.47694605354888153
+    - sphere:
+        center:
+          - -14.583328199522668
+          - 6.347928333245447
+          - 0.15
+        radius: 0.3
+        name: sphere -104
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -14.421880711650902
+          - 7.827816417480418
+          - 0.15
+        radius: 0.3
+        name: sphere -105
+        material:
+          lambertian:
+            albedo:
+              - 0.4689819382059433
+              - 0.5713974051201378
+              - 0.3933675955248324
+    - sphere:
+        center:
+          - -14.496515017774675
+          - 9.135415647016451
+          - 0.15
+        radius: 0.3
+        name: sphere -106
+        material:
+          metal:
+            albedo:
+              - 0.8916139406922118
+              - 0.9637325997077408
+              - 0.7218877825117926
+            fuzzy: 0.07591272702355956
+    - sphere:
+        center:
+          - -14.744324964728921
+          - 11.222636416953925
+          - 0.15
+        radius: 0.3
+        name: sphere -107
+        material:
+          metal:
+            albedo:
+              - 0.8125483207937982
+              - 0.5190593954917557
+              - 0.8558481280144925
+            fuzzy: 0.34616258758772933
+    - sphere:
+        center:
+          - -14.822202379107948
+          - 12.751580880118677
+          - 0.15
+        radius: 0.3
+        name: sphere -108
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -14.45845282065656
+          - 13.762313408368225
+          - 0.15
+        radius: 0.3
+        name: sphere -109
+        material:
+          lambertian:
+            albedo:
+              - 0.08990100839399665
+              - 0.7897070045400315
+              - 0.02297468160129921
+    - sphere:
+        center:
+          - -14.662634269113891
+          - 15.44425493887427
+          - 0.15
+        radius: 0.3
+        name: sphere -1010
+        material:
+          metal:
+            albedo:
+              - 0.8929034168197822
+              - 0.8803943304559556
+              - 0.8131187388354519
+            fuzzy: 0.07746886364227978
+    - sphere:
+        center:
+          - -13.300232496822959
+          - -16.453528690650984
+          - 0.15
+        radius: 0.3
+        name: sphere -9-11
+        material:
+          metal:
+            albedo:
+              - 0.981283986676168
+              - 0.5919114844798525
+              - 0.9612898347491452
+            fuzzy: 0.12076313616666123
+    - sphere:
+        center:
+          - -12.8909948537044
+          - -14.737029348003192
+          - 0.15
+        radius: 0.3
+        name: sphere -9-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -13.017681773326853
+          - -13.319426693176586
+          - 0.15
+        radius: 0.3
+        name: sphere -9-9
+        material:
+          lambertian:
+            albedo:
+              - 0.7561858764518996
+              - 0.7127599125034515
+              - 0.05024280527276284
+    - sphere:
+        center:
+          - -13.240421971574706
+          - -11.394309757135122
+          - 0.15
+        radius: 0.3
+        name: sphere -9-8
+        material:
+          metal:
+            albedo:
+              - 0.8842449921930244
+              - 0.9105980843544744
+              - 0.6705044726032859
+            fuzzy: 0.21803908106522718
+    - sphere:
+        center:
+          - -12.70122593795194
+          - -10.486221895375069
+          - 0.15
+        radius: 0.3
+        name: sphere -9-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -12.976873269802665
+          - -8.700051297934097
+          - 0.15
+        radius: 0.3
+        name: sphere -9-6
+        material:
+          metal:
+            albedo:
+              - 0.5717513161990235
+              - 0.7741941264989709
+              - 0.8704743242155584
+            fuzzy: 0.022997713281966203
+    - sphere:
+        center:
+          - -12.995921005121074
+          - -7.2890674203856305
+          - 0.15
+        radius: 0.3
+        name: sphere -9-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -13.21271125557824
+          - -5.780374638393714
+          - 0.15
+        radius: 0.3
+        name: sphere -9-4
+        material:
+          metal:
+            albedo:
+              - 0.5937027271633294
+              - 0.8144160852573209
+              - 0.6443655096250771
+            fuzzy: 0.031833726057278966
+    - sphere:
+        center:
+          - -13.259345765928138
+          - -4.08219828321441
+          - 0.15
+        radius: 0.3
+        name: sphere -9-3
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -13.358119660117271
+          - -2.9343416331213685
+          - 0.15
+        radius: 0.3
+        name: sphere -9-2
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -12.831759127545535
+          - -1.1612069478006966
+          - 0.15
+        radius: 0.3
+        name: sphere -9-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -12.952533797774743
+          - 0.017614326133533864
+          - 0.15
+        radius: 0.3
+        name: sphere -90
+        material:
+          metal:
+            albedo:
+              - 0.8482093264549614
+              - 0.5560261680880151
+              - 0.505836161651767
+            fuzzy: 0.34951097234329886
+    - sphere:
+        center:
+          - -12.778309066889287
+          - 1.956497307962007
+          - 0.15
+        radius: 0.3
+        name: sphere -91
+        material:
+          lambertian:
+            albedo:
+              - 0.5536808262847247
+              - 0.26938701708695484
+              - 0.2826224508950632
+    - sphere:
+        center:
+          - -13.241876223242537
+          - 3.062768647181823
+          - 0.15
+        radius: 0.3
+        name: sphere -92
+        material:
+          lambertian:
+            albedo:
+              - 0.15782791505943097
+              - 0.822695656752746
+              - 0.3981673723836431
+    - sphere:
+        center:
+          - -13.049464012972795
+          - 4.764541313235348
+          - 0.15
+        radius: 0.3
+        name: sphere -93
+        material:
+          lambertian:
+            albedo:
+              - 0.017126426128484404
+              - 0.4347379174605066
+              - 0.6667613455669471
+    - sphere:
+        center:
+          - -12.940621436343632
+          - 6.657140837843799
+          - 0.15
+        radius: 0.3
+        name: sphere -94
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -12.84691222723167
+          - 7.648491823163788
+          - 0.15
+        radius: 0.3
+        name: sphere -95
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -13.140533532069185
+          - 9.71338302522315
+          - 0.15
+        radius: 0.3
+        name: sphere -96
+        material:
+          metal:
+            albedo:
+              - 0.5694849579966998
+              - 0.6000878999200803
+              - 0.6971512318454158
+            fuzzy: 0.4193387682655083
+    - sphere:
+        center:
+          - -13.210696580323766
+          - 11.258599583788751
+          - 0.15
+        radius: 0.3
+        name: sphere -97
+        material:
+          lambertian:
+            albedo:
+              - 0.4856775378047992
+              - 0.7592919070628064
+              - 0.15888885667916286
+    - sphere:
+        center:
+          - -12.615942873449006
+          - 12.005048134536661
+          - 0.15
+        radius: 0.3
+        name: sphere -98
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -12.935705383355991
+          - 13.704875995888752
+          - 0.15
+        radius: 0.3
+        name: sphere -99
+        material:
+          metal:
+            albedo:
+              - 0.6196762124031059
+              - 0.8905386436854152
+              - 0.836218954323754
+            fuzzy: 0.4372243070131515
+    - sphere:
+        center:
+          - -13.208028149030532
+          - 15.086579680723158
+          - 0.15
+        radius: 0.3
+        name: sphere -910
+        material:
+          lambertian:
+            albedo:
+              - 0.5259681630234913
+              - 0.09252969216097835
+              - 0.6350384466508793
+    - sphere:
+        center:
+          - -11.671154333051199
+          - -15.787936867866417
+          - 0.15
+        radius: 0.3
+        name: sphere -8-11
+        material:
+          metal:
+            albedo:
+              - 0.8277074907677715
+              - 0.9251475516103714
+              - 0.692561269288936
+            fuzzy: 0.31633785804646253
+    - sphere:
+        center:
+          - -11.6297256689884
+          - -14.810875311451017
+          - 0.15
+        radius: 0.3
+        name: sphere -8-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.709961470055442
+          - -13.229997822705405
+          - 0.15
+        radius: 0.3
+        name: sphere -8-9
+        material:
+          lambertian:
+            albedo:
+              - 0.9498326951979524
+              - 0.9672992531212197
+              - 0.4419928123864001
+    - sphere:
+        center:
+          - -11.363370119571863
+          - -11.719096152839901
+          - 0.15
+        radius: 0.3
+        name: sphere -8-8
+        material:
+          metal:
+            albedo:
+              - 0.6132628235803077
+              - 0.7463515964630185
+              - 0.7474774802202666
+            fuzzy: 0.04466847247896
+    - sphere:
+        center:
+          - -11.526849617581673
+          - -10.282191207169394
+          - 0.15
+        radius: 0.3
+        name: sphere -8-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.33246027993934
+          - -8.1121232092404
+          - 0.15
+        radius: 0.3
+        name: sphere -8-6
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.856497209709543
+          - -6.640973137036702
+          - 0.15
+        radius: 0.3
+        name: sphere -8-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.942855310331055
+          - -5.280663326720175
+          - 0.15
+        radius: 0.3
+        name: sphere -8-4
+        material:
+          metal:
+            albedo:
+              - 0.6873123272759407
+              - 0.7242753149203166
+              - 0.6149676806030806
+            fuzzy: 0.424299181193758
+    - sphere:
+        center:
+          - -11.562522574963735
+          - -4.3106719795074815
+          - 0.15
+        radius: 0.3
+        name: sphere -8-3
+        material:
+          lambertian:
+            albedo:
+              - 0.557804704749257
+              - 0.9214901571495143
+              - 0.48260888810454683
+    - sphere:
+        center:
+          - -11.709021302145212
+          - -2.2820918408216415
+          - 0.15
+        radius: 0.3
+        name: sphere -8-2
+        material:
+          metal:
+            albedo:
+              - 0.865638801162911
+              - 0.7123352399155991
+              - 0.9865114275850226
+            fuzzy: 0.31650701972263384
+    - sphere:
+        center:
+          - -11.731691923738223
+          - -0.8616646461917792
+          - 0.15
+        radius: 0.3
+        name: sphere -8-1
+        material:
+          metal:
+            albedo:
+              - 0.6423309679746875
+              - 0.6881979618059311
+              - 0.5297277620971137
+            fuzzy: 0.3403496751971369
+    - sphere:
+        center:
+          - -11.909185157229166
+          - 0.7332060517720304
+          - 0.15
+        radius: 0.3
+        name: sphere -80
+        material:
+          metal:
+            albedo:
+              - 0.5056942816156811
+              - 0.5711920769248574
+              - 0.7828172715737058
+            fuzzy: 0.49612426394656417
+    - sphere:
+        center:
+          - -11.998249462621379
+          - 1.9843461181857562
+          - 0.15
+        radius: 0.3
+        name: sphere -81
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.8244972147519
+          - 3.391287969282325
+          - 0.15
+        radius: 0.3
+        name: sphere -82
+        material:
+          metal:
+            albedo:
+              - 0.5570370356763522
+              - 0.7870554534730259
+              - 0.6502101602231509
+            fuzzy: 0.0645670344524415
+    - sphere:
+        center:
+          - -11.217064700713914
+          - 4.936232323648645
+          - 0.15
+        radius: 0.3
+        name: sphere -83
+        material:
+          metal:
+            albedo:
+              - 0.898800723753759
+              - 0.6242432404303353
+              - 0.9199266540209048
+            fuzzy: 0.33060125704746246
+    - sphere:
+        center:
+          - -11.595943393285802
+          - 6.734907386334175
+          - 0.15
+        radius: 0.3
+        name: sphere -84
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.945629032789371
+          - 7.779661971381374
+          - 0.15
+        radius: 0.3
+        name: sphere -85
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.345541018562317
+          - 9.14912231766685
+          - 0.15
+        radius: 0.3
+        name: sphere -86
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -11.600721951436055
+          - 10.755915777403617
+          - 0.15
+        radius: 0.3
+        name: sphere -87
+        material:
+          metal:
+            albedo:
+              - 0.8072737564752029
+              - 0.7788299432098718
+              - 0.5776904583204133
+            fuzzy: 0.27997023662085774
+    - sphere:
+        center:
+          - -11.876652787355523
+          - 12.825150193926248
+          - 0.15
+        radius: 0.3
+        name: sphere -88
+        material:
+          lambertian:
+            albedo:
+              - 0.597256304673904
+              - 0.5421642115241335
+              - 0.8695029395885433
+    - sphere:
+        center:
+          - -11.263303084930888
+          - 14.139689935952044
+          - 0.15
+        radius: 0.3
+        name: sphere -89
+        material:
+          metal:
+            albedo:
+              - 0.6945173299786458
+              - 0.7891364339399262
+              - 0.7025990105962974
+            fuzzy: 0.2582014614594389
+    - sphere:
+        center:
+          - -11.574313863874341
+          - 15.06043000663422
+          - 0.15
+        radius: 0.3
+        name: sphere -810
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -9.956788805757759
+          - -16.451902991766335
+          - 0.15
+        radius: 0.3
+        name: sphere -7-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -10.260019719505287
+          - -14.477506647618155
+          - 0.15
+        radius: 0.3
+        name: sphere -7-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -9.959304455559943
+          - -13.20017094773727
+          - 0.15
+        radius: 0.3
+        name: sphere -7-9
+        material:
+          lambertian:
+            albedo:
+              - 0.8098044462756014
+              - 0.8991047819471824
+              - 0.09215443232513514
+    - sphere:
+        center:
+          - -9.845444702622137
+          - -11.217204205558415
+          - 0.15
+        radius: 0.3
+        name: sphere -7-8
+        material:
+          lambertian:
+            albedo:
+              - 0.7635078231530449
+              - 0.3744476426659499
+              - 0.11237799953333895
+    - sphere:
+        center:
+          - -10.165836450093956
+          - -9.835778419467317
+          - 0.15
+        radius: 0.3
+        name: sphere -7-7
+        material:
+          metal:
+            albedo:
+              - 0.5775827363438454
+              - 0.5255415197883796
+              - 0.6832011804306852
+            fuzzy: 0.3639567817143665
+    - sphere:
+        center:
+          - -10.064563588312048
+          - -8.614070489780252
+          - 0.15
+        radius: 0.3
+        name: sphere -7-6
+        material:
+          metal:
+            albedo:
+              - 0.9223589681182962
+              - 0.9887045503862006
+              - 0.6064367971776724
+            fuzzy: 0.07188043407232825
+    - sphere:
+        center:
+          - -9.709874701085912
+          - -7.21901069200789
+          - 0.15
+        radius: 0.3
+        name: sphere -7-5
+        material:
+          lambertian:
+            albedo:
+              - 0.4562700740144953
+              - 0.4734039249856372
+              - 0.2555858044582922
+    - sphere:
+        center:
+          - -9.876332131300217
+          - -5.793967158656448
+          - 0.15
+        radius: 0.3
+        name: sphere -7-4
+        material:
+          lambertian:
+            albedo:
+              - 0.644171775242269
+              - 0.16773459123753817
+              - 0.42801367468980567
+    - sphere:
+        center:
+          - -10.310009415577554
+          - -4.165255238142413
+          - 0.15
+        radius: 0.3
+        name: sphere -7-3
+        material:
+          lambertian:
+            albedo:
+              - 0.8932559939598513
+              - 0.013595487255195287
+              - 0.65935260447683
+    - sphere:
+        center:
+          - -9.782788238635453
+          - -2.9514231381224088
+          - 0.15
+        radius: 0.3
+        name: sphere -7-2
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -9.64886906255258
+          - -1.0682494740141177
+          - 0.15
+        radius: 0.3
+        name: sphere -7-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -9.995389128187783
+          - 0.4161799906236637
+          - 0.15
+        radius: 0.3
+        name: sphere -70
+        material:
+          metal:
+            albedo:
+              - 0.9073631916750343
+              - 0.8625530691162604
+              - 0.6629065629005396
+            fuzzy: 0.34383993868154195
+    - sphere:
+        center:
+          - -10.378934896130945
+          - 2.123353453562886
+          - 0.15
+        radius: 0.3
+        name: sphere -71
+        material:
+          metal:
+            albedo:
+              - 0.7640143856238077
+              - 0.7051585238696867
+              - 0.9610347245572983
+            fuzzy: 0.4152868789234795
+    - sphere:
+        center:
+          - -10.327240085887617
+          - 3.596800457313206
+          - 0.15
+        radius: 0.3
+        name: sphere -72
+        material:
+          lambertian:
+            albedo:
+              - 0.3680016783352718
+              - 0.3730392442467584
+              - 0.2940035226101449
+    - sphere:
+        center:
+          - -9.974433228842317
+          - 4.791955179554437
+          - 0.15
+        radius: 0.3
+        name: sphere -73
+        material:
+          lambertian:
+            albedo:
+              - 0.024192717530682743
+              - 0.5401043845963535
+              - 0.5404310280364377
+    - sphere:
+        center:
+          - -10.368304919849667
+          - 6.353739334924606
+          - 0.15
+        radius: 0.3
+        name: sphere -74
+        material:
+          metal:
+            albedo:
+              - 0.5028447718103991
+              - 0.9145030269675145
+              - 0.597209494853419
+            fuzzy: 0.27044808916063023
+    - sphere:
+        center:
+          - -9.84614148543653
+          - 7.572165864201968
+          - 0.15
+        radius: 0.3
+        name: sphere -75
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -10.034781957901803
+          - 9.05303874436895
+          - 0.15
+        radius: 0.3
+        name: sphere -76
+        material:
+          metal:
+            albedo:
+              - 0.7858978734900062
+              - 0.708592044041065
+              - 0.8327620261236015
+            fuzzy: 0.0604208699699762
+    - sphere:
+        center:
+          - -9.832778951893792
+          - 11.232875696268827
+          - 0.15
+        radius: 0.3
+        name: sphere -77
+        material:
+          metal:
+            albedo:
+              - 0.8577850025217378
+              - 0.9132676812833681
+              - 0.852335096655868
+            fuzzy: 0.46756093259046505
+    - sphere:
+        center:
+          - -9.684517213758985
+          - 12.428325598974446
+          - 0.15
+        radius: 0.3
+        name: sphere -78
+        material:
+          metal:
+            albedo:
+              - 0.5585504517578772
+              - 0.721746101073204
+              - 0.8151098778666486
+            fuzzy: 0.143444971155267
+    - sphere:
+        center:
+          - -9.665406087401639
+          - 14.392564288532023
+          - 0.15
+        radius: 0.3
+        name: sphere -79
+        material:
+          lambertian:
+            albedo:
+              - 0.8079184941662642
+              - 0.6680323684693028
+              - 0.4526861524984677
+    - sphere:
+        center:
+          - -9.964124709778202
+          - 15.849358675121954
+          - 0.15
+        radius: 0.3
+        name: sphere -710
+        material:
+          lambertian:
+            albedo:
+              - 0.5198100683093079
+              - 0.8240687595216794
+              - 0.16793995069091752
+    - sphere:
+        center:
+          - -8.10718775976283
+          - -15.87927807817538
+          - 0.15
+        radius: 0.3
+        name: sphere -6-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -8.93286224010617
+          - -14.100134377149326
+          - 0.15
+        radius: 0.3
+        name: sphere -6-10
+        material:
+          metal:
+            albedo:
+              - 0.7266666736948451
+              - 0.8861742517140927
+              - 0.6404391198838699
+            fuzzy: 0.39313753228048043
+    - sphere:
+        center:
+          - -8.890756006906742
+          - -12.624952577499595
+          - 0.15
+        radius: 0.3
+        name: sphere -6-9
+        material:
+          metal:
+            albedo:
+              - 0.8192544130404251
+              - 0.6284837195604727
+              - 0.5451816037346208
+            fuzzy: 0.31746787126699016
+    - sphere:
+        center:
+          - -8.297502198116849
+          - -11.39600461369873
+          - 0.15
+        radius: 0.3
+        name: sphere -6-8
+        material:
+          metal:
+            albedo:
+              - 0.5777907173431684
+              - 0.5406328947794181
+              - 0.6541999373959221
+            fuzzy: 0.06455654057214599
+    - sphere:
+        center:
+          - -8.281244216099095
+          - -10.295910539575752
+          - 0.15
+        radius: 0.3
+        name: sphere -6-7
+        material:
+          lambertian:
+            albedo:
+              - 0.15363096139972554
+              - 0.6185285173922725
+              - 0.42610124051681475
+    - sphere:
+        center:
+          - -8.17700365326407
+          - -8.250947780732016
+          - 0.15
+        radius: 0.3
+        name: sphere -6-6
+        material:
+          lambertian:
+            albedo:
+              - 0.02644366644490717
+              - 0.9723929890900053
+              - 0.030772580055439317
+    - sphere:
+        center:
+          - -8.884689427955719
+          - -7.340509457632978
+          - 0.15
+        radius: 0.3
+        name: sphere -6-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -8.500043350169824
+          - -5.573667651084792
+          - 0.15
+        radius: 0.3
+        name: sphere -6-4
+        material:
+          metal:
+            albedo:
+              - 0.5735757122577438
+              - 0.7511890721038291
+              - 0.9490562742838137
+            fuzzy: 0.0666003525142066
+    - sphere:
+        center:
+          - -8.694519608786395
+          - -4.032313716096184
+          - 0.15
+        radius: 0.3
+        name: sphere -6-3
+        material:
+          lambertian:
+            albedo:
+              - 0.6119769630363243
+              - 0.27155665825343334
+              - 0.4838940414773287
+    - sphere:
+        center:
+          - -8.908092776057504
+          - -2.2402365843451846
+          - 0.15
+        radius: 0.3
+        name: sphere -6-2
+        material:
+          metal:
+            albedo:
+              - 0.875940492465684
+              - 0.8609794493180916
+              - 0.6143943407622041
+            fuzzy: 0.4783532359236128
+    - sphere:
+        center:
+          - -8.81175593292993
+          - -1.2905860746445001
+          - 0.15
+        radius: 0.3
+        name: sphere -6-1
+        material:
+          lambertian:
+            albedo:
+              - 0.17969426969333932
+              - 0.20096033068998395
+              - 0.24503462846086585
+    - sphere:
+        center:
+          - -8.302209740546036
+          - 0.0880874897116216
+          - 0.15
+        radius: 0.3
+        name: sphere -60
+        material:
+          metal:
+            albedo:
+              - 0.5604254743270147
+              - 0.5352259380291843
+              - 0.9590211545986244
+            fuzzy: 0.17990378286770814
+    - sphere:
+        center:
+          - -8.82125875215667
+          - 1.5032638294568976
+          - 0.15
+        radius: 0.3
+        name: sphere -61
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -8.499507446772972
+          - 3.388202464781669
+          - 0.15
+        radius: 0.3
+        name: sphere -62
+        material:
+          metal:
+            albedo:
+              - 0.7995191802720072
+              - 0.758723803446433
+              - 0.757874401820483
+            fuzzy: 0.10600047621272413
+    - sphere:
+        center:
+          - -8.58049829769835
+          - 5.338078447014922
+          - 0.15
+        radius: 0.3
+        name: sphere -63
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -8.794302402825021
+          - 6.217164410442421
+          - 0.15
+        radius: 0.3
+        name: sphere -64
+        material:
+          lambertian:
+            albedo:
+              - 0.6575373772171118
+              - 0.779279413475604
+              - 0.5848906654247605
+    - sphere:
+        center:
+          - -8.864260935847776
+          - 7.6148112588201835
+          - 0.15
+        radius: 0.3
+        name: sphere -65
+        material:
+          lambertian:
+            albedo:
+              - 0.33549970955402164
+              - 0.07293370353867182
+              - 0.25175671179816456
+    - sphere:
+        center:
+          - -8.974771951562474
+          - 9.801682935323107
+          - 0.15
+        radius: 0.3
+        name: sphere -66
+        material:
+          metal:
+            albedo:
+              - 0.5793935733084664
+              - 0.5972465267047646
+              - 0.9189469679960296
+            fuzzy: 0.041771371072882646
+    - sphere:
+        center:
+          - -8.91613754862699
+          - 10.687327735625013
+          - 0.15
+        radius: 0.3
+        name: sphere -67
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -8.367687734890755
+          - 12.28490228955535
+          - 0.15
+        radius: 0.3
+        name: sphere -68
+        material:
+          metal:
+            albedo:
+              - 0.5426797869003029
+              - 0.6945963401364811
+              - 0.9112088555918677
+            fuzzy: 0.2287540717940051
+    - sphere:
+        center:
+          - -8.501394087643657
+          - 13.709607118800545
+          - 0.15
+        radius: 0.3
+        name: sphere -69
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -8.415769865975077
+          - 15.2623826807128
+          - 0.15
+        radius: 0.3
+        name: sphere -610
+        material:
+          metal:
+            albedo:
+              - 0.7645828740022426
+              - 0.5553267674321847
+              - 0.559316647001706
+            fuzzy: 0.49199191819451615
+    - sphere:
+        center:
+          - -7.292031333543783
+          - -15.953362574983739
+          - 0.15
+        radius: 0.3
+        name: sphere -5-11
+        material:
+          metal:
+            albedo:
+              - 0.9802957936953375
+              - 0.8225453690172035
+              - 0.7365463722858552
+            fuzzy: 0.2649970395604436
+    - sphere:
+        center:
+          - -7.195889311465773
+          - -14.924028601967702
+          - 0.15
+        radius: 0.3
+        name: sphere -5-10
+        material:
+          lambertian:
+            albedo:
+              - 0.6378511606359292
+              - 0.9684528384410261
+              - 0.4636376064979635
+    - sphere:
+        center:
+          - -6.969886211040017
+          - -13.399549574515166
+          - 0.15
+        radius: 0.3
+        name: sphere -5-9
+        material:
+          metal:
+            albedo:
+              - 0.6890895351641684
+              - 0.655867327302607
+              - 0.8259830269314433
+            fuzzy: 0.09858003636925627
+    - sphere:
+        center:
+          - -6.732268238558032
+          - -11.245171913482416
+          - 0.15
+        radius: 0.3
+        name: sphere -5-8
+        material:
+          lambertian:
+            albedo:
+              - 0.18948246678484118
+              - 0.13436767131207547
+              - 0.9458082293375806
+    - sphere:
+        center:
+          - -6.9854335102439995
+          - -10.33395039042386
+          - 0.15
+        radius: 0.3
+        name: sphere -5-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -7.160972660229505
+          - -8.73917573126283
+          - 0.15
+        radius: 0.3
+        name: sphere -5-6
+        material:
+          metal:
+            albedo:
+              - 0.8883438385006073
+              - 0.9492969765591542
+              - 0.5496573189603968
+            fuzzy: 0.05778298616230526
+    - sphere:
+        center:
+          - -7.369247324647601
+          - -7.093268548375648
+          - 0.15
+        radius: 0.3
+        name: sphere -5-5
+        material:
+          lambertian:
+            albedo:
+              - 0.29028782225487015
+              - 0.4026588111401992
+              - 0.3208888858239437
+    - sphere:
+        center:
+          - -6.6242017397930635
+          - -5.296737166092944
+          - 0.15
+        radius: 0.3
+        name: sphere -5-4
+        material:
+          metal:
+            albedo:
+              - 0.870559928039143
+              - 0.9767207627528447
+              - 0.8714225056954543
+            fuzzy: 0.24749419108809922
+    - sphere:
+        center:
+          - -7.27169100237342
+          - -3.98486700673985
+          - 0.15
+        radius: 0.3
+        name: sphere -5-3
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -7.347920209722268
+          - -2.9591902275399034
+          - 0.15
+        radius: 0.3
+        name: sphere -5-2
+        material:
+          lambertian:
+            albedo:
+              - 0.5080579931370603
+              - 0.5467989059946983
+              - 0.3041714274500568
+    - sphere:
+        center:
+          - -7.3734236463397576
+          - -0.7020244773390957
+          - 0.15
+        radius: 0.3
+        name: sphere -5-1
+        material:
+          lambertian:
+            albedo:
+              - 0.1275662090057249
+              - 0.046504333642249346
+              - 0.9661185199047273
+    - sphere:
+        center:
+          - -7.369306205226524
+          - 0.02011421784997084
+          - 0.15
+        radius: 0.3
+        name: sphere -50
+        material:
+          lambertian:
+            albedo:
+              - 0.24360100736954587
+              - 0.03720745019496413
+              - 0.8935661312167709
+    - sphere:
+        center:
+          - -7.146348760434899
+          - 1.5536870202915418
+          - 0.15
+        radius: 0.3
+        name: sphere -51
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -7.183455591514752
+          - 3.875530363823063
+          - 0.15
+        radius: 0.3
+        name: sphere -52
+        material:
+          metal:
+            albedo:
+              - 0.9170374560084067
+              - 0.6260851279540056
+              - 0.5474418860149071
+            fuzzy: 0.2018851337948575
+    - sphere:
+        center:
+          - -6.604293586307963
+          - 5.3631275007680514
+          - 0.15
+        radius: 0.3
+        name: sphere -53
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -7.381475780701992
+          - 6.006737861882056
+          - 0.15
+        radius: 0.3
+        name: sphere -54
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -6.802526195310594
+          - 8.217170431869178
+          - 0.15
+        radius: 0.3
+        name: sphere -55
+        material:
+          lambertian:
+            albedo:
+              - 0.5857778648133466
+              - 0.3789075438138361
+              - 0.4611710034052874
+    - sphere:
+        center:
+          - -6.979136383166954
+          - 9.689335939618706
+          - 0.15
+        radius: 0.3
+        name: sphere -56
+        material:
+          lambertian:
+            albedo:
+              - 0.6386511728530382
+              - 0.2982903976425931
+              - 0.7555023056106297
+    - sphere:
+        center:
+          - -6.745244816385627
+          - 10.507796931165451
+          - 0.15
+        radius: 0.3
+        name: sphere -57
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -7.006576639038092
+          - 12.199709970493075
+          - 0.15
+        radius: 0.3
+        name: sphere -58
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -6.622049744346296
+          - 13.529124847522725
+          - 0.15
+        radius: 0.3
+        name: sphere -59
+        material:
+          lambertian:
+            albedo:
+              - 0.642821589206697
+              - 0.36234581242272546
+              - 0.48277931980662825
+    - sphere:
+        center:
+          - -6.772768756158315
+          - 15.663387351472734
+          - 0.15
+        radius: 0.3
+        name: sphere -510
+        material:
+          metal:
+            albedo:
+              - 0.953528610463362
+              - 0.6640023455679327
+              - 0.5870342760637517
+            fuzzy: 0.16726967516092728
+    - sphere:
+        center:
+          - -5.471052969572859
+          - -16.457845253107227
+          - 0.15
+        radius: 0.3
+        name: sphere -4-11
+        material:
+          lambertian:
+            albedo:
+              - 0.6889834612381505
+              - 0.7688722263805114
+              - 0.04894507179963752
+    - sphere:
+        center:
+          - -5.42527674676969
+          - -14.974722388620703
+          - 0.15
+        radius: 0.3
+        name: sphere -4-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -5.909976691761943
+          - -13.277055174883111
+          - 0.15
+        radius: 0.3
+        name: sphere -4-9
+        material:
+          metal:
+            albedo:
+              - 0.7452009325962801
+              - 0.9065184414342418
+              - 0.5478804622752901
+            fuzzy: 0.4270226178129719
+    - sphere:
+        center:
+          - -5.584514290764699
+          - -11.633347292110285
+          - 0.15
+        radius: 0.3
+        name: sphere -4-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -5.52866274952645
+          - -9.808301537372301
+          - 0.15
+        radius: 0.3
+        name: sphere -4-7
+        material:
+          metal:
+            albedo:
+              - 0.9388616153956748
+              - 0.5373284256638563
+              - 0.660951562361914
+            fuzzy: 0.1622218372037575
+    - sphere:
+        center:
+          - -5.817166365392749
+          - -8.746103127095171
+          - 0.15
+        radius: 0.3
+        name: sphere -4-6
+        material:
+          metal:
+            albedo:
+              - 0.8296064669785377
+              - 0.7035404775479278
+              - 0.7249755441235285
+            fuzzy: 0.1582214855029277
+    - sphere:
+        center:
+          - -5.780635172334941
+          - -7.454316090412034
+          - 0.15
+        radius: 0.3
+        name: sphere -4-5
+        material:
+          metal:
+            albedo:
+              - 0.5647194485883539
+              - 0.8466131088112785
+              - 0.905204458899413
+            fuzzy: 0.09285275089494882
+    - sphere:
+        center:
+          - -5.75856490354159
+          - -5.44989238976495
+          - 0.15
+        radius: 0.3
+        name: sphere -4-4
+        material:
+          lambertian:
+            albedo:
+              - 0.45642559315190817
+              - 0.45591254348178367
+              - 0.8879634630423742
+    - sphere:
+        center:
+          - -5.890587203923722
+          - -4.424611542413535
+          - 0.15
+        radius: 0.3
+        name: sphere -4-3
+        material:
+          metal:
+            albedo:
+              - 0.6199598096099843
+              - 0.9188455834170798
+              - 0.5411654629227565
+            fuzzy: 0.19979975895847524
+    - sphere:
+        center:
+          - -5.812720853154825
+          - -2.472368798958634
+          - 0.15
+        radius: 0.3
+        name: sphere -4-2
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -5.403648900445888
+          - -0.6158737207659493
+          - 0.15
+        radius: 0.3
+        name: sphere -4-1
+        material:
+          metal:
+            albedo:
+              - 0.8701262848365405
+              - 0.7624195229197863
+              - 0.7042239661325441
+            fuzzy: 0.07268579827508082
+    - sphere:
+        center:
+          - -5.237647066501242
+          - 0.7212117153107498
+          - 0.15
+        radius: 0.3
+        name: sphere -40
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -5.725491259404674
+          - 2.332620328565614
+          - 0.15
+        radius: 0.3
+        name: sphere -41
+        material:
+          lambertian:
+            albedo:
+              - 0.457418742020035
+              - 0.6418189218240192
+              - 0.3940323346013029
+    - sphere:
+        center:
+          - -5.6067609002986885
+          - 3.608289867440789
+          - 0.15
+        radius: 0.3
+        name: sphere -42
+        material:
+          metal:
+            albedo:
+              - 0.5838973155494522
+              - 0.6434084655886918
+              - 0.8706677231018907
+            fuzzy: 0.06477580980941433
+    - sphere:
+        center:
+          - -5.2640579522310995
+          - 4.5548783212188555
+          - 0.15
+        radius: 0.3
+        name: sphere -43
+        material:
+          lambertian:
+            albedo:
+              - 0.18875311669055353
+              - 0.6013817623234109
+              - 0.7231121947103115
+    - sphere:
+        center:
+          - -5.209891438884053
+          - 6.2644487140736365
+          - 0.15
+        radius: 0.3
+        name: sphere -44
+        material:
+          metal:
+            albedo:
+              - 0.8165213647565124
+              - 0.8757011706569247
+              - 0.7704172950492296
+            fuzzy: 0.24659964832051473
+    - sphere:
+        center:
+          - -5.483263717135465
+          - 8.150642191274983
+          - 0.15
+        radius: 0.3
+        name: sphere -45
+        material:
+          lambertian:
+            albedo:
+              - 0.45009770300702184
+              - 0.7845232084167643
+              - 0.7759148742727403
+    - sphere:
+        center:
+          - -5.121953099548719
+          - 9.006913049754328
+          - 0.15
+        radius: 0.3
+        name: sphere -46
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -5.252746118265179
+          - 10.73714727648209
+          - 0.15
+        radius: 0.3
+        name: sphere -47
+        material:
+          metal:
+            albedo:
+              - 0.658700596306793
+              - 0.8350753849519836
+              - 0.6441909705927893
+            fuzzy: 0.329734466300562
+    - sphere:
+        center:
+          - -5.894625056529706
+          - 12.246671189962267
+          - 0.15
+        radius: 0.3
+        name: sphere -48
+        material:
+          metal:
+            albedo:
+              - 0.6938403849049999
+              - 0.6047590148580947
+              - 0.5702982004945049
+            fuzzy: 0.34218299213467207
+    - sphere:
+        center:
+          - -5.68590686468557
+          - 13.939519052977953
+          - 0.15
+        radius: 0.3
+        name: sphere -49
+        material:
+          metal:
+            albedo:
+              - 0.8328882072003392
+              - 0.8233161405918313
+              - 0.6027748730508757
+            fuzzy: 0.23456091628641718
+    - sphere:
+        center:
+          - -5.120061602650989
+          - 15.131077626134818
+          - 0.15
+        radius: 0.3
+        name: sphere -410
+        material:
+          metal:
+            albedo:
+              - 0.856176042745403
+              - 0.9047498838599
+              - 0.8204327290478615
+            fuzzy: 0.17233579825835843
+    - sphere:
+        center:
+          - -4.424847522435328
+          - -15.947373295664233
+          - 0.15
+        radius: 0.3
+        name: sphere -3-11
+        material:
+          lambertian:
+            albedo:
+              - 0.690613043272031
+              - 0.16666059253900206
+              - 0.7592701797146701
+    - sphere:
+        center:
+          - -4.257964471896077
+          - -14.985067573476792
+          - 0.15
+        radius: 0.3
+        name: sphere -3-10
+        material:
+          lambertian:
+            albedo:
+              - 0.6244910044199405
+              - 0.10607776138702571
+              - 0.12433748949740625
+    - sphere:
+        center:
+          - -4.010081863812808
+          - -12.831380630858941
+          - 0.15
+        radius: 0.3
+        name: sphere -3-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -3.9351800801016923
+          - -11.577443215101454
+          - 0.15
+        radius: 0.3
+        name: sphere -3-8
+        material:
+          metal:
+            albedo:
+              - 0.7604122992432331
+              - 0.8043585615516595
+              - 0.9295587996238868
+            fuzzy: 0.2859278750256946
+    - sphere:
+        center:
+          - -4.1899384793655186
+          - -10.228460855795403
+          - 0.15
+        radius: 0.3
+        name: sphere -3-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -4.160005025866957
+          - -8.430299125467238
+          - 0.15
+        radius: 0.3
+        name: sphere -3-6
+        material:
+          metal:
+            albedo:
+              - 0.7354745013810602
+              - 0.9026921452910339
+              - 0.8488732964367666
+            fuzzy: 0.2462020213452074
+    - sphere:
+        center:
+          - -3.656409724817938
+          - -7.0957506773921315
+          - 0.15
+        radius: 0.3
+        name: sphere -3-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -3.978157337396167
+          - -5.6983433608015055
+          - 0.15
+        radius: 0.3
+        name: sphere -3-4
+        material:
+          metal:
+            albedo:
+              - 0.7115251894655896
+              - 0.984950384428771
+              - 0.743008973228102
+            fuzzy: 0.14900198666576625
+    - sphere:
+        center:
+          - -4.439376254251737
+          - -4.216296240821192
+          - 0.15
+        radius: 0.3
+        name: sphere -3-3
+        material:
+          lambertian:
+            albedo:
+              - 0.49421539297089995
+              - 0.3677142642259827
+              - 0.8730044415176277
+    - sphere:
+        center:
+          - -3.617809650702838
+          - -2.5339812325737174
+          - 0.15
+        radius: 0.3
+        name: sphere -3-2
+        material:
+          lambertian:
+            albedo:
+              - 0.9270231781965276
+              - 0.2716662149869458
+              - 0.6483660282728698
+    - sphere:
+        center:
+          - -4.201581626457848
+          - -0.9031990700109547
+          - 0.15
+        radius: 0.3
+        name: sphere -3-1
+        material:
+          lambertian:
+            albedo:
+              - 0.38501513408557486
+              - 0.3307127388196992
+              - 0.8029786895866325
+    - sphere:
+        center:
+          - -3.962369937574354
+          - 0.8325302950211798
+          - 0.15
+        radius: 0.3
+        name: sphere -30
+        material:
+          lambertian:
+            albedo:
+              - 0.3441968821694727
+              - 0.11240040817045933
+              - 0.004024069984476037
+    - sphere:
+        center:
+          - -4.311994803987304
+          - 1.6128841502588553
+          - 0.15
+        radius: 0.3
+        name: sphere -31
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -4.314963136085049
+          - 3.878905530299194
+          - 0.15
+        radius: 0.3
+        name: sphere -32
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -4.369165415566131
+          - 4.827328063080714
+          - 0.15
+        radius: 0.3
+        name: sphere -33
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -3.702428478121952
+          - 6.374144404177926
+          - 0.15
+        radius: 0.3
+        name: sphere -34
+        material:
+          metal:
+            albedo:
+              - 0.8868508008229645
+              - 0.6290362117374351
+              - 0.7781075543011998
+            fuzzy: 0.47681531706978386
+    - sphere:
+        center:
+          - -3.611801673886178
+          - 8.01595204305194
+          - 0.15
+        radius: 0.3
+        name: sphere -35
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -3.8777229386644194
+          - 9.102883159632981
+          - 0.15
+        radius: 0.3
+        name: sphere -36
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -4.003024758932317
+          - 10.590576147670172
+          - 0.15
+        radius: 0.3
+        name: sphere -37
+        material:
+          lambertian:
+            albedo:
+              - 0.3699838213316105
+              - 0.25469545792313997
+              - 0.44332012834765194
+    - sphere:
+        center:
+          - -3.6335922836514967
+          - 12.006695025874134
+          - 0.15
+        radius: 0.3
+        name: sphere -38
+        material:
+          lambertian:
+            albedo:
+              - 0.12202265142479732
+              - 0.8664132507558248
+              - 0.14883276446926655
+    - sphere:
+        center:
+          - -4.194405166352486
+          - 13.874547880473562
+          - 0.15
+        radius: 0.3
+        name: sphere -39
+        material:
+          lambertian:
+            albedo:
+              - 0.1178262718986672
+              - 0.8597048651819906
+              - 0.46910273595627805
+    - sphere:
+        center:
+          - -3.630221698967942
+          - 15.89201170237643
+          - 0.15
+        radius: 0.3
+        name: sphere -310
+        material:
+          lambertian:
+            albedo:
+              - 0.6132351864214646
+              - 0.36832188249262243
+              - 0.24626597292250782
+    - sphere:
+        center:
+          - -2.848568625919979
+          - -16.086881585708227
+          - 0.15
+        radius: 0.3
+        name: sphere -2-11
+        material:
+          metal:
+            albedo:
+              - 0.5781179870318766
+              - 0.6953525518456722
+              - 0.9774930793581386
+            fuzzy: 0.41307353937423796
+    - sphere:
+        center:
+          - -2.3436229445749217
+          - -14.962127212319878
+          - 0.15
+        radius: 0.3
+        name: sphere -2-10
+        material:
+          metal:
+            albedo:
+              - 0.6962090410388306
+              - 0.7647283743587656
+              - 0.8497132545465351
+            fuzzy: 0.4490205423873781
+    - sphere:
+        center:
+          - -2.822312488699
+          - -12.884494273494294
+          - 0.15
+        radius: 0.3
+        name: sphere -2-9
+        material:
+          metal:
+            albedo:
+              - 0.8660573969225861
+              - 0.7777174577523811
+              - 0.7820538115646096
+            fuzzy: 0.03494529542157454
+    - sphere:
+        center:
+          - -2.8041613206642912
+          - -11.220532031112054
+          - 0.15
+        radius: 0.3
+        name: sphere -2-8
+        material:
+          metal:
+            albedo:
+              - 0.7808468041258865
+              - 0.7098955737776104
+              - 0.7250994389337001
+            fuzzy: 0.4311724505255967
+    - sphere:
+        center:
+          - -2.474388021880566
+          - -9.805150148702372
+          - 0.15
+        radius: 0.3
+        name: sphere -2-7
+        material:
+          lambertian:
+            albedo:
+              - 0.25186405357415587
+              - 0.16001423426003247
+              - 0.7412895072219013
+    - sphere:
+        center:
+          - -2.1444053566988814
+          - -8.887903923916795
+          - 0.15
+        radius: 0.3
+        name: sphere -2-6
+        material:
+          metal:
+            albedo:
+              - 0.5027108871437942
+              - 0.5774383314213614
+              - 0.7673387252944524
+            fuzzy: 0.4456301068274927
+    - sphere:
+        center:
+          - -2.561596661772517
+          - -6.873918926878969
+          - 0.15
+        radius: 0.3
+        name: sphere -2-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -2.2122785512289376
+          - -5.970636407793023
+          - 0.15
+        radius: 0.3
+        name: sphere -2-4
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -2.3916561330906854
+          - -3.812888473517794
+          - 0.15
+        radius: 0.3
+        name: sphere -2-3
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -2.9175436475162986
+          - -2.1927256633167387
+          - 0.15
+        radius: 0.3
+        name: sphere -2-2
+        material:
+          lambertian:
+            albedo:
+              - 0.0520236822782728
+              - 0.671247878238972
+              - 0.7130537168365602
+    - sphere:
+        center:
+          - -2.9887806421683045
+          - -0.8284652818164281
+          - 0.15
+        radius: 0.3
+        name: sphere -2-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -2.941445626853597
+          - 0.0753458594210722
+          - 0.15
+        radius: 0.3
+        name: sphere -20
+        material:
+          metal:
+            albedo:
+              - 0.9745295762768014
+              - 0.972927203939622
+              - 0.9126459034211178
+            fuzzy: 0.2702640007289714
+    - sphere:
+        center:
+          - -2.8603704618858368
+          - 1.8243996735506487
+          - 0.15
+        radius: 0.3
+        name: sphere -21
+        material:
+          metal:
+            albedo:
+              - 0.7768486907711998
+              - 0.80983455604164
+              - 0.9776944371288152
+            fuzzy: 0.2678321020587885
+    - sphere:
+        center:
+          - -2.604148995330354
+          - 3.467894134824511
+          - 0.15
+        radius: 0.3
+        name: sphere -22
+        material:
+          metal:
+            albedo:
+              - 0.9363685965399747
+              - 0.6025818302453044
+              - 0.5734061952362852
+            fuzzy: 0.2733157680545545
+    - sphere:
+        center:
+          - -2.276885550580322
+          - 5.1083219192089855
+          - 0.15
+        radius: 0.3
+        name: sphere -23
+        material:
+          lambertian:
+            albedo:
+              - 0.29390424157152856
+              - 0.459394872491348
+              - 0.7663509235863186
+    - sphere:
+        center:
+          - -2.216349265714255
+          - 6.377566503724611
+          - 0.15
+        radius: 0.3
+        name: sphere -24
+        material:
+          lambertian:
+            albedo:
+              - 0.33683971736685087
+              - 0.3719575380248151
+              - 0.4315925388386579
+    - sphere:
+        center:
+          - -2.9979765276432486
+          - 8.16650395190779
+          - 0.15
+        radius: 0.3
+        name: sphere -25
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -2.8337803972269207
+          - 9.420727671987661
+          - 0.15
+        radius: 0.3
+        name: sphere -26
+        material:
+          metal:
+            albedo:
+              - 0.6243123327401755
+              - 0.841619670151341
+              - 0.6378802032796999
+            fuzzy: 0.4643863662021791
+    - sphere:
+        center:
+          - -2.511887821461976
+          - 11.042182401865942
+          - 0.15
+        radius: 0.3
+        name: sphere -27
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -2.1807147481595286
+          - 12.64822835339292
+          - 0.15
+        radius: 0.3
+        name: sphere -28
+        material:
+          metal:
+            albedo:
+              - 0.707131064437627
+              - 0.5960806747591664
+              - 0.8510098943975349
+            fuzzy: 0.12944348668562167
+    - sphere:
+        center:
+          - -2.2635492487691127
+          - 13.773210140711532
+          - 0.15
+        radius: 0.3
+        name: sphere -29
+        material:
+          metal:
+            albedo:
+              - 0.5707118675249623
+              - 0.8134820548901128
+              - 0.5850395832805197
+            fuzzy: 0.48163428628323524
+    - sphere:
+        center:
+          - -2.5960972837041445
+          - 15.743566626955836
+          - 0.15
+        radius: 0.3
+        name: sphere -210
+        material:
+          lambertian:
+            albedo:
+              - 0.9199997704657198
+              - 0.6969320168403508
+              - 0.7779534065101933
+    - sphere:
+        center:
+          - -0.6366503464220009
+          - -15.943016567216631
+          - 0.15
+        radius: 0.3
+        name: sphere -1-11
+        material:
+          lambertian:
+            albedo:
+              - 0.6768055705147508
+              - 0.8941014887787482
+              - 0.7675450761893865
+    - sphere:
+        center:
+          - -1.2843228833342464
+          - -14.928110172314481
+          - 0.15
+        radius: 0.3
+        name: sphere -1-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -0.9037684890549863
+          - -12.6921665918106
+          - 0.15
+        radius: 0.3
+        name: sphere -1-9
+        material:
+          metal:
+            albedo:
+              - 0.8041526569906852
+              - 0.5667231801965942
+              - 0.6441891577628487
+            fuzzy: 0.20556634765985649
+    - sphere:
+        center:
+          - -0.9835796719734348
+          - -11.322366624823415
+          - 0.15
+        radius: 0.3
+        name: sphere -1-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -1.0558493605472803
+          - -10.102903677529287
+          - 0.15
+        radius: 0.3
+        name: sphere -1-7
+        material:
+          metal:
+            albedo:
+              - 0.7300011040124469
+              - 0.7172300964555746
+              - 0.7273148182235228
+            fuzzy: 0.4682705502492127
+    - sphere:
+        center:
+          - -1.430880196532651
+          - -8.48316650164544
+          - 0.15
+        radius: 0.3
+        name: sphere -1-6
+        material:
+          metal:
+            albedo:
+              - 0.6734227888220248
+              - 0.9528116792884279
+              - 0.68523940718695
+            fuzzy: 0.36945300797302605
+    - sphere:
+        center:
+          - -0.992545373662739
+          - -6.694574026704278
+          - 0.15
+        radius: 0.3
+        name: sphere -1-5
+        material:
+          lambertian:
+            albedo:
+              - 0.8828699484301463
+              - 0.8382763100078151
+              - 0.7901495731563365
+    - sphere:
+        center:
+          - -1.2823439780936745
+          - -5.915979786997802
+          - 0.15
+        radius: 0.3
+        name: sphere -1-4
+        material:
+          lambertian:
+            albedo:
+              - 0.582652292337436
+              - 0.4940674751877223
+              - 0.26786407535944495
+    - sphere:
+        center:
+          - -1.4660701436728711
+          - -3.701488344297391
+          - 0.15
+        radius: 0.3
+        name: sphere -1-3
+        material:
+          metal:
+            albedo:
+              - 0.7671299818088881
+              - 0.5702385058997053
+              - 0.8425340096215258
+            fuzzy: 0.034364135705529875
+    - sphere:
+        center:
+          - -0.9316975519359089
+          - -2.558448941835074
+          - 0.15
+        radius: 0.3
+        name: sphere -1-2
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -0.910567359672295
+          - -1.0341906364932336
+          - 0.15
+        radius: 0.3
+        name: sphere -1-1
+        material:
+          metal:
+            albedo:
+              - 0.968455018906629
+              - 0.7092151029655364
+              - 0.654560042709
+            fuzzy: 0.40574723733471796
+    - sphere:
+        center:
+          - -0.864496844649148
+          - 0.7923689005250499
+          - 0.15
+        radius: 0.3
+        name: sphere -10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -1.3925699643133844
+          - 1.6845131555447237
+          - 0.15
+        radius: 0.3
+        name: sphere -11
+        material:
+          metal:
+            albedo:
+              - 0.9870764178615947
+              - 0.5017653508895514
+              - 0.6331239706775802
+            fuzzy: 0.04261616266589652
+    - sphere:
+        center:
+          - -0.6758259338595413
+          - 3.8748160568762358
+          - 0.15
+        radius: 0.3
+        name: sphere -12
+        material:
+          metal:
+            albedo:
+              - 0.9554974083946522
+              - 0.8913972883426304
+              - 0.7159871832426685
+            fuzzy: 0.41287027379361685
+    - sphere:
+        center:
+          - -0.8843085699057228
+          - 4.747390391178929
+          - 0.15
+        radius: 0.3
+        name: sphere -13
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -0.7763464961810588
+          - 6.058938627752886
+          - 0.15
+        radius: 0.3
+        name: sphere -14
+        material:
+          lambertian:
+            albedo:
+              - 0.5206510324672063
+              - 0.008696676272183568
+              - 0.11435571041534182
+    - sphere:
+        center:
+          - -1.1298907597626389
+          - 7.912200404743256
+          - 0.15
+        radius: 0.3
+        name: sphere -15
+        material:
+          lambertian:
+            albedo:
+              - 0.1721814121379681
+              - 0.9608609620328966
+              - 0.5484193597104995
+    - sphere:
+        center:
+          - -1.1411717083846895
+          - 9.647060699110348
+          - 0.15
+        radius: 0.3
+        name: sphere -16
+        material:
+          lambertian:
+            albedo:
+              - 0.28568401293881457
+              - 0.1784847982171888
+              - 0.5875303925993638
+    - sphere:
+        center:
+          - -1.0549472001459193
+          - 10.834870656119051
+          - 0.15
+        radius: 0.3
+        name: sphere -17
+        material:
+          lambertian:
+            albedo:
+              - 0.9568670949894315
+              - 0.5604832875611747
+              - 0.9890848117499739
+    - sphere:
+        center:
+          - -0.6513189344410447
+          - 12.789437332159086
+          - 0.15
+        radius: 0.3
+        name: sphere -18
+        material:
+          metal:
+            albedo:
+              - 0.978017292414943
+              - 0.731381693608083
+              - 0.8989071653373001
+            fuzzy: 0.39035765648138454
+    - sphere:
+        center:
+          - -1.195433912078511
+          - 13.697111096348289
+          - 0.15
+        radius: 0.3
+        name: sphere -19
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - -1.052717622480212
+          - 15.812169474352745
+          - 0.15
+        radius: 0.3
+        name: sphere -110
+        material:
+          lambertian:
+            albedo:
+              - 0.6439449897777344
+              - 0.19643113189716532
+              - 0.7258923927967785
+    - sphere:
+        center:
+          - 0.2590117330592378
+          - -16.366006215724134
+          - 0.15
+        radius: 0.3
+        name: sphere 0-11
+        material:
+          lambertian:
+            albedo:
+              - 0.7380198573664385
+              - 0.9608991504313065
+              - 0.7984913916503912
+    - sphere:
+        center:
+          - 0.32188308883769623
+          - -14.943002916522897
+          - 0.15
+        radius: 0.3
+        name: sphere 0-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.6034063510440878
+          - -12.68897606115087
+          - 0.15
+        radius: 0.3
+        name: sphere 0-9
+        material:
+          metal:
+            albedo:
+              - 0.5450647954029331
+              - 0.5023604195609588
+              - 0.8354271098209097
+            fuzzy: 0.3232355921359388
+    - sphere:
+        center:
+          - 0.6035930321705688
+          - -11.674926112888052
+          - 0.15
+        radius: 0.3
+        name: sphere 0-8
+        material:
+          lambertian:
+            albedo:
+              - 0.1097361902284191
+              - 0.7737018704133336
+              - 0.32503803207962395
+    - sphere:
+        center:
+          - 0.007409868217793336
+          - -10.039437372095895
+          - 0.15
+        radius: 0.3
+        name: sphere 0-7
+        material:
+          lambertian:
+            albedo:
+              - 0.04298264881814026
+              - 0.5306753042187113
+              - 0.6464213651604688
+    - sphere:
+        center:
+          - 0.8850386347886645
+          - -8.404217806512172
+          - 0.15
+        radius: 0.3
+        name: sphere 0-6
+        material:
+          metal:
+            albedo:
+              - 0.52947224616199
+              - 0.9280446007241351
+              - 0.9653177889059072
+            fuzzy: 0.37735793317409705
+    - sphere:
+        center:
+          - 0.2835093097683863
+          - -7.300128740653841
+          - 0.15
+        radius: 0.3
+        name: sphere 0-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.8152290334751336
+          - -5.3537425149814775
+          - 0.15
+        radius: 0.3
+        name: sphere 0-4
+        material:
+          lambertian:
+            albedo:
+              - 0.7990886221714145
+              - 0.7142608314599851
+              - 0.9828219623092374
+    - sphere:
+        center:
+          - 0.4787729206255117
+          - -3.7971104611811426
+          - 0.15
+        radius: 0.3
+        name: sphere 0-3
+        material:
+          lambertian:
+            albedo:
+              - 0.3666770525896633
+              - 0.41347877132154504
+              - 0.8643776824577284
+    - sphere:
+        center:
+          - 0.12226360238303587
+          - -2.3443309311243867
+          - 0.15
+        radius: 0.3
+        name: sphere 0-2
+        material:
+          lambertian:
+            albedo:
+              - 0.7617011564749178
+              - 0.07609818139977627
+              - 0.9086464813721866
+    - sphere:
+        center:
+          - 0.0966717831588354
+          - -1.3118438665390173
+          - 0.15
+        radius: 0.3
+        name: sphere 0-1
+        material:
+          lambertian:
+            albedo:
+              - 0.9605536083109721
+              - 0.23769425213615406
+              - 0.132474174229608
+    - sphere:
+        center:
+          - 0.6990807330924028
+          - 0.8780736010075969
+          - 0.15
+        radius: 0.3
+        name: sphere 00
+        material:
+          lambertian:
+            albedo:
+              - 0.42266724601631317
+              - 0.07042408916942945
+              - 0.9107005846440429
+    - sphere:
+        center:
+          - 0.1804334339677016
+          - 1.7767611580012255
+          - 0.15
+        radius: 0.3
+        name: sphere 01
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.5869662495044211
+          - 3.5346219742674077
+          - 0.15
+        radius: 0.3
+        name: sphere 02
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.15564527364838174
+          - 5.395360488889463
+          - 0.15
+        radius: 0.3
+        name: sphere 03
+        material:
+          lambertian:
+            albedo:
+              - 0.2640314258378292
+              - 0.394590820120139
+              - 0.062153193015404465
+    - sphere:
+        center:
+          - 0.09948442071902808
+          - 6.701919099608857
+          - 0.15
+        radius: 0.3
+        name: sphere 04
+        material:
+          metal:
+            albedo:
+              - 0.718040194086673
+              - 0.8733990867809103
+              - 0.7950912024334545
+            fuzzy: 0.037671705650035414
+    - sphere:
+        center:
+          - 0.1958169541180963
+          - 8.124642068714252
+          - 0.15
+        radius: 0.3
+        name: sphere 05
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.16738843400699402
+          - 9.478264984729256
+          - 0.15
+        radius: 0.3
+        name: sphere 06
+        material:
+          lambertian:
+            albedo:
+              - 0.27291599491739993
+              - 0.34202399095485936
+              - 0.9610885123878666
+    - sphere:
+        center:
+          - 0.342244829216372
+          - 11.169673311550543
+          - 0.15
+        radius: 0.3
+        name: sphere 07
+        material:
+          metal:
+            albedo:
+              - 0.837350093165591
+              - 0.9355939823994965
+              - 0.6812513680851595
+            fuzzy: 0.4929786821383335
+    - sphere:
+        center:
+          - 0.08353314362594462
+          - 12.683780771718764
+          - 0.15
+        radius: 0.3
+        name: sphere 08
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.14672102238770066
+          - 13.666601974926348
+          - 0.15
+        radius: 0.3
+        name: sphere 09
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 0.8858569381123341
+          - 15.845835928773887
+          - 0.15
+        radius: 0.3
+        name: sphere 010
+        material:
+          metal:
+            albedo:
+              - 0.7240485168624321
+              - 0.6950431913046811
+              - 0.560516764968878
+            fuzzy: 0.42478669201242436
+    - sphere:
+        center:
+          - 2.2737386058874947
+          - -16.28173806765611
+          - 0.15
+        radius: 0.3
+        name: sphere 1-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 1.568964370626325
+          - -14.60577085874102
+          - 0.15
+        radius: 0.3
+        name: sphere 1-10
+        material:
+          metal:
+            albedo:
+              - 0.7440408257654247
+              - 0.6638726240108191
+              - 0.9311987064616696
+            fuzzy: 0.2921370424604548
+    - sphere:
+        center:
+          - 2.020673292223605
+          - -12.67971029267203
+          - 0.15
+        radius: 0.3
+        name: sphere 1-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 2.132158580014803
+          - -11.778767880651674
+          - 0.15
+        radius: 0.3
+        name: sphere 1-8
+        material:
+          lambertian:
+            albedo:
+              - 0.5027031842782561
+              - 0.7466947862558857
+              - 0.2228669465911328
+    - sphere:
+        center:
+          - 2.309974075605141
+          - -9.783205942015133
+          - 0.15
+        radius: 0.3
+        name: sphere 1-7
+        material:
+          metal:
+            albedo:
+              - 0.9880375612760689
+              - 0.5677115825475179
+              - 0.6639743964029817
+            fuzzy: 0.17666343822729358
+    - sphere:
+        center:
+          - 1.5841913499606866
+          - -8.657331500415694
+          - 0.15
+        radius: 0.3
+        name: sphere 1-6
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 1.886476610946196
+          - -7.302845909155498
+          - 0.15
+        radius: 0.3
+        name: sphere 1-5
+        material:
+          lambertian:
+            albedo:
+              - 0.5807490345922453
+              - 0.34265898720915683
+              - 0.4986911949124556
+    - sphere:
+        center:
+          - 1.8981068494096154
+          - -5.6177493847820426
+          - 0.15
+        radius: 0.3
+        name: sphere 1-4
+        material:
+          metal:
+            albedo:
+              - 0.5448110917731485
+              - 0.7749630670634761
+              - 0.9169271791647537
+            fuzzy: 0.30807379340797636
+    - sphere:
+        center:
+          - 2.1172263191378664
+          - -4.422006471696798
+          - 0.15
+        radius: 0.3
+        name: sphere 1-3
+        material:
+          lambertian:
+            albedo:
+              - 0.13742961681132462
+              - 0.2326753624873836
+              - 0.7829397582482945
+    - sphere:
+        center:
+          - 1.7909716467728707
+          - -2.7219736530236105
+          - 0.15
+        radius: 0.3
+        name: sphere 1-2
+        material:
+          lambertian:
+            albedo:
+              - 0.24446832677571112
+              - 0.9344610292905369
+              - 0.17663217222570834
+    - sphere:
+        center:
+          - 1.9734833674464909
+          - -0.7679489468337033
+          - 0.15
+        radius: 0.3
+        name: sphere 1-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 1.6484371662484572
+          - 0.22476332809805347
+          - 0.15
+        radius: 0.3
+        name: sphere 10
+        material:
+          metal:
+            albedo:
+              - 0.7568605193068734
+              - 0.5641899133770361
+              - 0.6861295439658903
+            fuzzy: 0.3579136333674561
+    - sphere:
+        center:
+          - 1.7303369570991565
+          - 1.5493987271248895
+          - 0.15
+        radius: 0.3
+        name: sphere 11
+        material:
+          metal:
+            albedo:
+              - 0.8604599321286774
+              - 0.8099484073538411
+              - 0.7369965226420085
+            fuzzy: 0.4372122653953865
+    - sphere:
+        center:
+          - 2.1189236989315843
+          - 3.1937156277376824
+          - 0.15
+        radius: 0.3
+        name: sphere 12
+        material:
+          lambertian:
+            albedo:
+              - 0.9464118924462455
+              - 0.42968831551768005
+              - 0.5423683372667385
+    - sphere:
+        center:
+          - 1.7835067166579261
+          - 5.138740736396565
+          - 0.15
+        radius: 0.3
+        name: sphere 13
+        material:
+          lambertian:
+            albedo:
+              - 0.4081846676017845
+              - 0.3419894163043789
+              - 0.9110489650043896
+    - sphere:
+        center:
+          - 2.3364827336596923
+          - 6.870657276713959
+          - 0.15
+        radius: 0.3
+        name: sphere 14
+        material:
+          metal:
+            albedo:
+              - 0.5393215387627508
+              - 0.8467657863529672
+              - 0.6439052540721084
+            fuzzy: 0.3124684370935856
+    - sphere:
+        center:
+          - 2.101124705140926
+          - 8.311635515113029
+          - 0.15
+        radius: 0.3
+        name: sphere 15
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 1.7292959365892568
+          - 9.822839457084267
+          - 0.15
+        radius: 0.3
+        name: sphere 16
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 2.0725162416745393
+          - 11.01863150750729
+          - 0.15
+        radius: 0.3
+        name: sphere 17
+        material:
+          metal:
+            albedo:
+              - 0.5984498434218709
+              - 0.8314986798838173
+              - 0.6909510614004737
+            fuzzy: 0.08310555042223844
+    - sphere:
+        center:
+          - 2.0030027385782723
+          - 12.149372281591797
+          - 0.15
+        radius: 0.3
+        name: sphere 18
+        material:
+          metal:
+            albedo:
+              - 0.8149982345669742
+              - 0.567495206126324
+              - 0.6082444840938824
+            fuzzy: 0.4394348466558827
+    - sphere:
+        center:
+          - 1.6759645807819825
+          - 13.738001528611877
+          - 0.15
+        radius: 0.3
+        name: sphere 19
+        material:
+          lambertian:
+            albedo:
+              - 0.9126507324664144
+              - 0.22578226931558074
+              - 0.5504558331052575
+    - sphere:
+        center:
+          - 2.140449343997221
+          - 15.845756696492838
+          - 0.15
+        radius: 0.3
+        name: sphere 110
+        material:
+          lambertian:
+            albedo:
+              - 0.17393441229565637
+              - 0.43402180173540006
+              - 0.30104471660819304
+    - sphere:
+        center:
+          - 3.3458945116371974
+          - -16.040156742226284
+          - 0.15
+        radius: 0.3
+        name: sphere 2-11
+        material:
+          lambertian:
+            albedo:
+              - 0.305014212911605
+              - 0.7754727515098416
+              - 0.5233794944365618
+    - sphere:
+        center:
+          - 3.525516819477617
+          - -14.359119433812598
+          - 0.15
+        radius: 0.3
+        name: sphere 2-10
+        material:
+          metal:
+            albedo:
+              - 0.800835597370801
+              - 0.8013890469579343
+              - 0.9269143526235624
+            fuzzy: 0.4442255488879532
+    - sphere:
+        center:
+          - 3.4198215546183732
+          - -13.268403442132854
+          - 0.15
+        radius: 0.3
+        name: sphere 2-9
+        material:
+          metal:
+            albedo:
+              - 0.6440836211315445
+              - 0.6099070894201121
+              - 0.733264310908037
+            fuzzy: 0.18511973014036498
+    - sphere:
+        center:
+          - 3.7271310348804727
+          - -11.41369612091544
+          - 0.15
+        radius: 0.3
+        name: sphere 2-8
+        material:
+          lambertian:
+            albedo:
+              - 0.9532080421797889
+              - 0.9008558493980595
+              - 0.00850650450829409
+    - sphere:
+        center:
+          - 3.6921236392036043
+          - -10.236084148312713
+          - 0.15
+        radius: 0.3
+        name: sphere 2-7
+        material:
+          lambertian:
+            albedo:
+              - 0.8359360152710217
+              - 0.06508261050165902
+              - 0.2689614556349382
+    - sphere:
+        center:
+          - 3.0449057868361655
+          - -8.94460194569962
+          - 0.15
+        radius: 0.3
+        name: sphere 2-6
+        material:
+          metal:
+            albedo:
+              - 0.5566984453574031
+              - 0.5158114182675961
+              - 0.7446268704378554
+            fuzzy: 0.30476807038916376
+    - sphere:
+        center:
+          - 3.847341537120542
+          - -6.606138529496619
+          - 0.15
+        radius: 0.3
+        name: sphere 2-5
+        material:
+          metal:
+            albedo:
+              - 0.6344563720508545
+              - 0.6969348159746199
+              - 0.9654805607265471
+            fuzzy: 0.36232420068607185
+    - sphere:
+        center:
+          - 3.8872665099229033
+          - -5.668063212932161
+          - 0.15
+        radius: 0.3
+        name: sphere 2-4
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 3.1442513250407744
+          - -3.6425399261199507
+          - 0.15
+        radius: 0.3
+        name: sphere 2-3
+        material:
+          metal:
+            albedo:
+              - 0.7692992668132054
+              - 0.5162885947149983
+              - 0.9136254868257534
+            fuzzy: 0.2761459995120592
+    - sphere:
+        center:
+          - 3.122424480009594
+          - -2.703999866548671
+          - 0.15
+        radius: 0.3
+        name: sphere 2-2
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 3.446487883260299
+          - -0.8210631451190973
+          - 0.15
+        radius: 0.3
+        name: sphere 2-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 3.7441930425990186
+          - 1.6398860533224964
+          - 0.15
+        radius: 0.3
+        name: sphere 21
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 3.4251281551680073
+          - 3.3503992415313277
+          - 0.15
+        radius: 0.3
+        name: sphere 22
+        material:
+          metal:
+            albedo:
+              - 0.8947269593198897
+              - 0.7703894999544346
+              - 0.8066017285951808
+            fuzzy: 0.268221128431513
+    - sphere:
+        center:
+          - 3.4039663064470966
+          - 4.803091330943047
+          - 0.15
+        radius: 0.3
+        name: sphere 23
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 3.6421847364495927
+          - 6.54129219871649
+          - 0.15
+        radius: 0.3
+        name: sphere 24
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 3.451080403432915
+          - 7.518669818553601
+          - 0.15
+        radius: 0.3
+        name: sphere 25
+        material:
+          lambertian:
+            albedo:
+              - 0.16553752100427982
+              - 0.4705965343867519
+              - 0.9411134392244922
+    - sphere:
+        center:
+          - 3.6279335611667674
+          - 9.198411845778066
+          - 0.15
+        radius: 0.3
+        name: sphere 26
+        material:
+          lambertian:
+            albedo:
+              - 0.820276284544952
+              - 0.49703368150243105
+              - 0.6185332034780101
+    - sphere:
+        center:
+          - 3.1002832677465797
+          - 11.361776689221688
+          - 0.15
+        radius: 0.3
+        name: sphere 27
+        material:
+          lambertian:
+            albedo:
+              - 0.8939510206707234
+              - 0.7892348718604704
+              - 0.5026024991207527
+    - sphere:
+        center:
+          - 3.1960374197266535
+          - 12.870500434510635
+          - 0.15
+        radius: 0.3
+        name: sphere 28
+        material:
+          metal:
+            albedo:
+              - 0.9326180067024943
+              - 0.7494800602237897
+              - 0.7803357660458896
+            fuzzy: 0.004005577045413267
+    - sphere:
+        center:
+          - 3.426800783447089
+          - 13.953138721233257
+          - 0.15
+        radius: 0.3
+        name: sphere 29
+        material:
+          metal:
+            albedo:
+              - 0.9774873191937345
+              - 0.9733732299315914
+              - 0.7989773338163475
+            fuzzy: 0.1717637571453321
+    - sphere:
+        center:
+          - 3.416256818668729
+          - 15.862801412845073
+          - 0.15
+        radius: 0.3
+        name: sphere 210
+        material:
+          lambertian:
+            albedo:
+              - 0.344683839101282
+              - 0.4159975353133251
+              - 0.0035660239675777026
+    - sphere:
+        center:
+          - 4.772524134929829
+          - -16.427840499386225
+          - 0.15
+        radius: 0.3
+        name: sphere 3-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 5.050670801866934
+          - -14.834566739749448
+          - 0.15
+        radius: 0.3
+        name: sphere 3-10
+        material:
+          lambertian:
+            albedo:
+              - 0.9088744408195505
+              - 0.18564661084611053
+              - 0.35117917487323985
+    - sphere:
+        center:
+          - 5.193147163354312
+          - -13.32944569515241
+          - 0.15
+        radius: 0.3
+        name: sphere 3-9
+        material:
+          lambertian:
+            albedo:
+              - 0.04909419623943027
+              - 0.022692812685069338
+              - 0.21094872458948713
+    - sphere:
+        center:
+          - 4.987676642699507
+          - -11.992461557449353
+          - 0.15
+        radius: 0.3
+        name: sphere 3-8
+        material:
+          lambertian:
+            albedo:
+              - 0.14371524235052283
+              - 0.24107354556135996
+              - 0.6284813196890819
+    - sphere:
+        center:
+          - 5.322359827799671
+          - -9.912758826000276
+          - 0.15
+        radius: 0.3
+        name: sphere 3-7
+        material:
+          metal:
+            albedo:
+              - 0.8123551336088914
+              - 0.7143554687199571
+              - 0.8961721209401563
+            fuzzy: 0.4323604534181138
+    - sphere:
+        center:
+          - 4.670618529736222
+          - -8.794467732981456
+          - 0.15
+        radius: 0.3
+        name: sphere 3-6
+        material:
+          lambertian:
+            albedo:
+              - 0.38895758450279955
+              - 0.30693712455369515
+              - 0.8036035567146163
+    - sphere:
+        center:
+          - 4.753453908749053
+          - -7.347535727122289
+          - 0.15
+        radius: 0.3
+        name: sphere 3-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 5.0571863584916095
+          - -5.810868891228382
+          - 0.15
+        radius: 0.3
+        name: sphere 3-4
+        material:
+          lambertian:
+            albedo:
+              - 0.4602239861231107
+              - 0.14447386335793125
+              - 0.7408216647110419
+    - sphere:
+        center:
+          - 4.5881066061604105
+          - -4.441870021357984
+          - 0.15
+        radius: 0.3
+        name: sphere 3-3
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 5.057970336641936
+          - -2.2877476333715085
+          - 0.15
+        radius: 0.3
+        name: sphere 3-2
+        material:
+          metal:
+            albedo:
+              - 0.528748893140682
+              - 0.751487432189585
+              - 0.699869412499883
+            fuzzy: 0.3408436067078655
+    - sphere:
+        center:
+          - 5.279211506238193
+          - -1.4212552521781536
+          - 0.15
+        radius: 0.3
+        name: sphere 3-1
+        material:
+          metal:
+            albedo:
+              - 0.7619838440159539
+              - 0.7120450508621523
+              - 0.8888167717355855
+            fuzzy: 0.428797237560833
+    - sphere:
+        center:
+          - 5.327171855216429
+          - 0.8345919695834598
+          - 0.15
+        radius: 0.3
+        name: sphere 30
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 5.101233378663014
+          - 1.6785877337738682
+          - 0.15
+        radius: 0.3
+        name: sphere 31
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 5.041435677475327
+          - 3.4757871875720046
+          - 0.15
+        radius: 0.3
+        name: sphere 32
+        material:
+          lambertian:
+            albedo:
+              - 0.7461961305390897
+              - 0.5829171029860668
+              - 0.4122956340141403
+    - sphere:
+        center:
+          - 4.9079112424768825
+          - 5.391254808485753
+          - 0.15
+        radius: 0.3
+        name: sphere 33
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 5.398040850915711
+          - 6.8876542117600605
+          - 0.15
+        radius: 0.3
+        name: sphere 34
+        material:
+          metal:
+            albedo:
+              - 0.8009820662718617
+              - 0.9533595523877635
+              - 0.684394517070003
+            fuzzy: 0.30032555908634595
+    - sphere:
+        center:
+          - 5.09662986394796
+          - 7.728658888797855
+          - 0.15
+        radius: 0.3
+        name: sphere 35
+        material:
+          lambertian:
+            albedo:
+              - 0.09595623797040699
+              - 0.41282346559043304
+              - 0.7685989559062222
+    - sphere:
+        center:
+          - 4.943205901352939
+          - 9.643850470125052
+          - 0.15
+        radius: 0.3
+        name: sphere 36
+        material:
+          metal:
+            albedo:
+              - 0.6086588914854166
+              - 0.8898768968007724
+              - 0.8824260104977333
+            fuzzy: 0.03305464881378872
+    - sphere:
+        center:
+          - 4.729745132980681
+          - 10.556514986899662
+          - 0.15
+        radius: 0.3
+        name: sphere 37
+        material:
+          lambertian:
+            albedo:
+              - 0.049230535538403994
+              - 0.27813235789817115
+              - 0.5726018827102767
+    - sphere:
+        center:
+          - 4.562367251127118
+          - 12.082683876592794
+          - 0.15
+        radius: 0.3
+        name: sphere 38
+        material:
+          lambertian:
+            albedo:
+              - 0.3627305094307066
+              - 0.31229456569266373
+              - 0.9406173444695415
+    - sphere:
+        center:
+          - 4.960193496882283
+          - 13.873100133053775
+          - 0.15
+        radius: 0.3
+        name: sphere 39
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 4.567791210473924
+          - 15.29327547882486
+          - 0.15
+        radius: 0.3
+        name: sphere 310
+        material:
+          metal:
+            albedo:
+              - 0.5660058586038993
+              - 0.9880021145739
+              - 0.951062592656067
+            fuzzy: 0.41431935229635153
+    - sphere:
+        center:
+          - 6.062083123147881
+          - -16.181729518298315
+          - 0.15
+        radius: 0.3
+        name: sphere 4-11
+        material:
+          lambertian:
+            albedo:
+              - 0.78265247484362
+              - 0.08010759253961211
+              - 0.5048376208495879
+    - sphere:
+        center:
+          - 6.373595607013291
+          - -14.353619169709358
+          - 0.15
+        radius: 0.3
+        name: sphere 4-10
+        material:
+          lambertian:
+            albedo:
+              - 0.7642710431137709
+              - 0.5322502223991945
+              - 0.4289822259783388
+    - sphere:
+        center:
+          - 6.435279090800963
+          - -13.149670197138093
+          - 0.15
+        radius: 0.3
+        name: sphere 4-9
+        material:
+          lambertian:
+            albedo:
+              - 0.8399477243571171
+              - 0.876392515073935
+              - 0.2797760277056762
+    - sphere:
+        center:
+          - 6.481906548665135
+          - -11.371546912115202
+          - 0.15
+        radius: 0.3
+        name: sphere 4-8
+        material:
+          metal:
+            albedo:
+              - 0.6723594253202537
+              - 0.7142634740260241
+              - 0.7906377864402598
+            fuzzy: 0.2677370833667453
+    - sphere:
+        center:
+          - 6.700096811649065
+          - -10.168859008125347
+          - 0.15
+        radius: 0.3
+        name: sphere 4-7
+        material:
+          metal:
+            albedo:
+              - 0.5447884827958474
+              - 0.6836597667291984
+              - 0.5322891787623719
+            fuzzy: 0.42389912872885915
+    - sphere:
+        center:
+          - 6.149348291894488
+          - -8.868449771586876
+          - 0.15
+        radius: 0.3
+        name: sphere 4-6
+        material:
+          lambertian:
+            albedo:
+              - 0.6742942755709689
+              - 0.4621288816760428
+              - 0.21646986572930083
+    - sphere:
+        center:
+          - 6.03171759185545
+          - -6.65844734457025
+          - 0.15
+        radius: 0.3
+        name: sphere 4-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 6.791536312851215
+          - -5.929261738090415
+          - 0.15
+        radius: 0.3
+        name: sphere 4-4
+        material:
+          metal:
+            albedo:
+              - 0.8242657448914684
+              - 0.7238054425997904
+              - 0.9796733339849439
+            fuzzy: 0.34575917923002975
+    - sphere:
+        center:
+          - 6.507143376793325
+          - -4.126700556277162
+          - 0.15
+        radius: 0.3
+        name: sphere 4-3
+        material:
+          lambertian:
+            albedo:
+              - 0.8600446364111918
+              - 0.959440680775423
+              - 0.9566565172389863
+    - sphere:
+        center:
+          - 6.385324263129546
+          - -2.360648865395863
+          - 0.15
+        radius: 0.3
+        name: sphere 4-2
+        material:
+          lambertian:
+            albedo:
+              - 0.7045615489391012
+              - 0.5271144434942211
+              - 0.6145498989087917
+    - sphere:
+        center:
+          - 6.410361236071339
+          - -0.7195718230560654
+          - 0.15
+        radius: 0.3
+        name: sphere 4-1
+        material:
+          metal:
+            albedo:
+              - 0.5924321646924099
+              - 0.9013328899652164
+              - 0.5239184978458451
+            fuzzy: 0.4230086537749387
+    - sphere:
+        center:
+          - 6.558912225248703
+          - 0.8259634128896051
+          - 0.15
+        radius: 0.3
+        name: sphere 40
+        material:
+          lambertian:
+            albedo:
+              - 0.975291947869299
+              - 0.7117416591358503
+              - 0.6114751134357875
+    - sphere:
+        center:
+          - 6.037847117182691
+          - 2.331197400154003
+          - 0.15
+        radius: 0.3
+        name: sphere 41
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 6.880347733605264
+          - 3.2177849661955173
+          - 0.15
+        radius: 0.3
+        name: sphere 42
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 6.208747938446342
+          - 5.194660057154775
+          - 0.15
+        radius: 0.3
+        name: sphere 43
+        material:
+          lambertian:
+            albedo:
+              - 0.9684918158503049
+              - 0.6648352310837464
+              - 0.011259220141063137
+    - sphere:
+        center:
+          - 6.68846343319902
+          - 6.428769944352151
+          - 0.15
+        radius: 0.3
+        name: sphere 44
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 6.609689955763032
+          - 8.088613929225833
+          - 0.15
+        radius: 0.3
+        name: sphere 45
+        material:
+          metal:
+            albedo:
+              - 0.5099763891879144
+              - 0.6492479046809734
+              - 0.8759372606100817
+            fuzzy: 0.2333926901803023
+    - sphere:
+        center:
+          - 6.261322988119949
+          - 9.761141544455732
+          - 0.15
+        radius: 0.3
+        name: sphere 46
+        material:
+          lambertian:
+            albedo:
+              - 0.8786498136461828
+              - 0.69071329606888
+              - 0.8403911598066228
+    - sphere:
+        center:
+          - 6.716746541241771
+          - 11.324480483421688
+          - 0.15
+        radius: 0.3
+        name: sphere 47
+        material:
+          lambertian:
+            albedo:
+              - 0.8956457629329051
+              - 0.10389179559406635
+              - 0.6613541879432752
+    - sphere:
+        center:
+          - 6.125458654565931
+          - 12.21513575073406
+          - 0.15
+        radius: 0.3
+        name: sphere 48
+        material:
+          metal:
+            albedo:
+              - 0.9863663945887857
+              - 0.5278696230971912
+              - 0.700756972087436
+            fuzzy: 0.12018136466715468
+    - sphere:
+        center:
+          - 6.874899603840159
+          - 14.044499644037563
+          - 0.15
+        radius: 0.3
+        name: sphere 49
+        material:
+          lambertian:
+            albedo:
+              - 0.08107484304263801
+              - 0.7484398002641908
+              - 0.21113964158432938
+    - sphere:
+        center:
+          - 6.27191776094939
+          - 15.416710431624079
+          - 0.15
+        radius: 0.3
+        name: sphere 410
+        material:
+          lambertian:
+            albedo:
+              - 0.42136713080471877
+              - 0.5357416041308223
+              - 0.3028437988465331
+    - sphere:
+        center:
+          - 7.524341094450329
+          - -15.93436795733845
+          - 0.15
+        radius: 0.3
+        name: sphere 5-11
+        material:
+          metal:
+            albedo:
+              - 0.6604680424478178
+              - 0.6562312294780028
+              - 0.6612008920136585
+            fuzzy: 0.21067698212315744
+    - sphere:
+        center:
+          - 8.373159771115835
+          - -14.457540736947834
+          - 0.15
+        radius: 0.3
+        name: sphere 5-10
+        material:
+          metal:
+            albedo:
+              - 0.9212952038523838
+              - 0.9531500978382029
+              - 0.7675490874670453
+            fuzzy: 0.2948107535530129
+    - sphere:
+        center:
+          - 8.069082209493136
+          - -13.197383122007455
+          - 0.15
+        radius: 0.3
+        name: sphere 5-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 8.135764552454738
+          - -11.259274003807645
+          - 0.15
+        radius: 0.3
+        name: sphere 5-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 7.609404751730995
+          - -10.187194249388007
+          - 0.15
+        radius: 0.3
+        name: sphere 5-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 7.594658121676199
+          - -8.297784956972109
+          - 0.15
+        radius: 0.3
+        name: sphere 5-6
+        material:
+          lambertian:
+            albedo:
+              - 0.7884756147721061
+              - 0.4892827265556094
+              - 0.3010821987397876
+    - sphere:
+        center:
+          - 8.318988484145635
+          - -6.933073739079998
+          - 0.15
+        radius: 0.3
+        name: sphere 5-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 8.265918413582732
+          - -5.1621198434910704
+          - 0.15
+        radius: 0.3
+        name: sphere 5-4
+        material:
+          lambertian:
+            albedo:
+              - 0.38109481384771426
+              - 0.5249713388492782
+              - 0.23062605805292558
+    - sphere:
+        center:
+          - 7.662993219357467
+          - -4.281416332076063
+          - 0.15
+        radius: 0.3
+        name: sphere 5-3
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 7.678396319718387
+          - -2.528925714090839
+          - 0.15
+        radius: 0.3
+        name: sphere 5-2
+        material:
+          lambertian:
+            albedo:
+              - 0.5170748840385976
+              - 0.7975023202381435
+              - 0.19608193663009862
+    - sphere:
+        center:
+          - 7.705750074458459
+          - -1.0797624127094063
+          - 0.15
+        radius: 0.3
+        name: sphere 5-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 7.803249255119042
+          - 0.3869184763515931
+          - 0.15
+        radius: 0.3
+        name: sphere 50
+        material:
+          lambertian:
+            albedo:
+              - 0.6473631304325592
+              - 0.7506961564136074
+              - 0.4831246300927879
+    - sphere:
+        center:
+          - 7.656728433119131
+          - 1.5023504716184308
+          - 0.15
+        radius: 0.3
+        name: sphere 51
+        material:
+          metal:
+            albedo:
+              - 0.5409685226966521
+              - 0.7707920376869528
+              - 0.9484883284881532
+            fuzzy: 0.14213553084184738
+    - sphere:
+        center:
+          - 8.081710010202404
+          - 3.82715320429443
+          - 0.15
+        radius: 0.3
+        name: sphere 52
+        material:
+          metal:
+            albedo:
+              - 0.6368834000722954
+              - 0.5346499880232536
+              - 0.5209625716264968
+            fuzzy: 0.420779843167841
+    - sphere:
+        center:
+          - 8.169471821159078
+          - 5.002373761484836
+          - 0.15
+        radius: 0.3
+        name: sphere 53
+        material:
+          lambertian:
+            albedo:
+              - 0.033322278256509685
+              - 0.6317227933815607
+              - 0.8562912901079821
+    - sphere:
+        center:
+          - 7.7710984368445
+          - 6.289952348054407
+          - 0.15
+        radius: 0.3
+        name: sphere 54
+        material:
+          lambertian:
+            albedo:
+              - 0.13847677970392425
+              - 0.8291396629966584
+              - 0.9721830853544985
+    - sphere:
+        center:
+          - 7.8256664183879145
+          - 8.126852552821271
+          - 0.15
+        radius: 0.3
+        name: sphere 55
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 7.509801249363662
+          - 9.08773430250095
+          - 0.15
+        radius: 0.3
+        name: sphere 56
+        material:
+          lambertian:
+            albedo:
+              - 0.5023880354570492
+              - 0.27790409231253677
+              - 0.11093625546344242
+    - sphere:
+        center:
+          - 7.624375356771786
+          - 11.205628014052747
+          - 0.15
+        radius: 0.3
+        name: sphere 57
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 7.650621814121415
+          - 12.186585892703484
+          - 0.15
+        radius: 0.3
+        name: sphere 58
+        material:
+          lambertian:
+            albedo:
+              - 0.8235520855516058
+              - 0.5805107326519998
+              - 0.0025491333646564707
+    - sphere:
+        center:
+          - 8.113348840071273
+          - 14.099969925679556
+          - 0.15
+        radius: 0.3
+        name: sphere 59
+        material:
+          metal:
+            albedo:
+              - 0.8628836786419962
+              - 0.930609204802638
+              - 0.515954596140562
+            fuzzy: 0.31342400161697614
+    - sphere:
+        center:
+          - 7.7239042769328545
+          - 15.414977813956824
+          - 0.15
+        radius: 0.3
+        name: sphere 510
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.50005352138964
+          - -16.136761148203213
+          - 0.15
+        radius: 0.3
+        name: sphere 6-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.010508327775701
+          - -14.684473128750975
+          - 0.15
+        radius: 0.3
+        name: sphere 6-10
+        material:
+          lambertian:
+            albedo:
+              - 0.6893763799583433
+              - 0.19859247678644562
+              - 0.3973620980070327
+    - sphere:
+        center:
+          - 9.402558867497541
+          - -12.892513727718205
+          - 0.15
+        radius: 0.3
+        name: sphere 6-9
+        material:
+          metal:
+            albedo:
+              - 0.6505158502729017
+              - 0.9006313346165602
+              - 0.8185385240565173
+            fuzzy: 0.14374896162699669
+    - sphere:
+        center:
+          - 9.199112371961586
+          - -11.343425200725383
+          - 0.15
+        radius: 0.3
+        name: sphere 6-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.811256854404558
+          - -10.305015532028145
+          - 0.15
+        radius: 0.3
+        name: sphere 6-7
+        material:
+          lambertian:
+            albedo:
+              - 0.07184440907157366
+              - 0.7314200236704751
+              - 0.5421084804875174
+    - sphere:
+        center:
+          - 9.190560906617632
+          - -8.761544140416438
+          - 0.15
+        radius: 0.3
+        name: sphere 6-6
+        material:
+          lambertian:
+            albedo:
+              - 0.352632587522307
+              - 0.9766960528361273
+              - 0.8202396930373178
+    - sphere:
+        center:
+          - 9.132174887478843
+          - -7.34468452675645
+          - 0.15
+        radius: 0.3
+        name: sphere 6-5
+        material:
+          lambertian:
+            albedo:
+              - 0.9480550240404174
+              - 0.7346189744502758
+              - 0.09487487887948293
+    - sphere:
+        center:
+          - 9.046850181629233
+          - -5.712835365742422
+          - 0.15
+        radius: 0.3
+        name: sphere 6-4
+        material:
+          lambertian:
+            albedo:
+              - 0.8635965484939432
+              - 0.11708625600487385
+              - 0.5553449481025018
+    - sphere:
+        center:
+          - 9.262781789790482
+          - -4.326624863744031
+          - 0.15
+        radius: 0.3
+        name: sphere 6-3
+        material:
+          metal:
+            albedo:
+              - 0.9620197779349673
+              - 0.6170354770107339
+              - 0.6649641210493683
+            fuzzy: 0.15468708830277844
+    - sphere:
+        center:
+          - 9.073818754033873
+          - -2.75929646357785
+          - 0.15
+        radius: 0.3
+        name: sphere 6-2
+        material:
+          lambertian:
+            albedo:
+              - 0.8497508632688743
+              - 0.8400019197925591
+              - 0.711147697453527
+    - sphere:
+        center:
+          - 9.123269934421021
+          - -0.9498402871339942
+          - 0.15
+        radius: 0.3
+        name: sphere 6-1
+        material:
+          lambertian:
+            albedo:
+              - 0.26450202462177963
+              - 0.38702505901790557
+              - 0.9518506506707021
+    - sphere:
+        center:
+          - 9.471715626939382
+          - 0.3436531716173089
+          - 0.15
+        radius: 0.3
+        name: sphere 60
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.393674068262731
+          - 2.2817081191323902
+          - 0.15
+        radius: 0.3
+        name: sphere 61
+        material:
+          metal:
+            albedo:
+              - 0.7771082719639371
+              - 0.8762082161655405
+              - 0.5617231930540819
+            fuzzy: 0.1906224893293429
+    - sphere:
+        center:
+          - 9.069675055955065
+          - 3.856331249120353
+          - 0.15
+        radius: 0.3
+        name: sphere 62
+        material:
+          lambertian:
+            albedo:
+              - 0.027077609142783742
+              - 0.27962263813629273
+              - 0.35614692466005266
+    - sphere:
+        center:
+          - 9.75480956470266
+          - 5.3741682527601355
+          - 0.15
+        radius: 0.3
+        name: sphere 63
+        material:
+          lambertian:
+            albedo:
+              - 0.0996177806071417
+              - 0.6191585517139906
+              - 0.6673889453245179
+    - sphere:
+        center:
+          - 9.148157130186844
+          - 6.47433109105965
+          - 0.15
+        radius: 0.3
+        name: sphere 64
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.83747840563044
+          - 7.883049102769216
+          - 0.15
+        radius: 0.3
+        name: sphere 65
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.168296212660296
+          - 9.796501418662524
+          - 0.15
+        radius: 0.3
+        name: sphere 66
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.58579282633213
+          - 10.676116562620722
+          - 0.15
+        radius: 0.3
+        name: sphere 67
+        material:
+          lambertian:
+            albedo:
+              - 0.5467240263774836
+              - 0.6003853496899894
+              - 0.651756398335484
+    - sphere:
+        center:
+          - 9.425851876640655
+          - 12.134842863800856
+          - 0.15
+        radius: 0.3
+        name: sphere 68
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.04393120875421
+          - 14.231598596618692
+          - 0.15
+        radius: 0.3
+        name: sphere 69
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 9.455489499084745
+          - 15.185920442545381
+          - 0.15
+        radius: 0.3
+        name: sphere 610
+        material:
+          metal:
+            albedo:
+              - 0.6667944502664537
+              - 0.5492015593328532
+              - 0.7163418482539238
+            fuzzy: 0.38273881571586277
+    - sphere:
+        center:
+          - 11.236464275554203
+          - -16.31709543035602
+          - 0.15
+        radius: 0.3
+        name: sphere 7-11
+        material:
+          lambertian:
+            albedo:
+              - 0.1569732181322675
+              - 0.2331911064781768
+              - 0.10556604481935418
+    - sphere:
+        center:
+          - 10.80646816063552
+          - -14.729207582859972
+          - 0.15
+        radius: 0.3
+        name: sphere 7-10
+        material:
+          metal:
+            albedo:
+              - 0.7344540725874672
+              - 0.6049315734401097
+              - 0.7830998686091886
+            fuzzy: 0.17373490833157101
+    - sphere:
+        center:
+          - 10.606670415230633
+          - -12.935774721515665
+          - 0.15
+        radius: 0.3
+        name: sphere 7-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 11.17578274866915
+          - -11.646140097804212
+          - 0.15
+        radius: 0.3
+        name: sphere 7-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 10.592724634369654
+          - -10.337092838270987
+          - 0.15
+        radius: 0.3
+        name: sphere 7-7
+        material:
+          lambertian:
+            albedo:
+              - 0.3108538740624603
+              - 0.8778722696135397
+              - 0.5851653191905936
+    - sphere:
+        center:
+          - 10.64728169103036
+          - -8.498411766094044
+          - 0.15
+        radius: 0.3
+        name: sphere 7-6
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 11.228665454832745
+          - -7.056665461127156
+          - 0.15
+        radius: 0.3
+        name: sphere 7-5
+        material:
+          metal:
+            albedo:
+              - 0.6898299658788734
+              - 0.8346004190642213
+              - 0.6050268113897368
+            fuzzy: 0.20006856158835662
+    - sphere:
+        center:
+          - 10.606044475366154
+          - -5.87858576165647
+          - 0.15
+        radius: 0.3
+        name: sphere 7-4
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 11.19671910216411
+          - -4.031000678326028
+          - 0.15
+        radius: 0.3
+        name: sphere 7-3
+        material:
+          metal:
+            albedo:
+              - 0.9785090918943257
+              - 0.64005995507706
+              - 0.7377314939101652
+            fuzzy: 0.4488016010764544
+    - sphere:
+        center:
+          - 10.629985211996082
+          - -2.6192021231379354
+          - 0.15
+        radius: 0.3
+        name: sphere 7-2
+        material:
+          metal:
+            albedo:
+              - 0.5166032612574687
+              - 0.9656650076185385
+              - 0.9468304306083702
+            fuzzy: 0.325607172483696
+    - sphere:
+        center:
+          - 10.983670228533672
+          - -0.8473090543831256
+          - 0.15
+        radius: 0.3
+        name: sphere 7-1
+        material:
+          lambertian:
+            albedo:
+              - 0.34234802393403857
+              - 0.42455953547505354
+              - 0.5218858292065753
+    - sphere:
+        center:
+          - 11.047605573774327
+          - 0.2526918784470244
+          - 0.15
+        radius: 0.3
+        name: sphere 70
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 10.80322111708497
+          - 2.379214838350258
+          - 0.15
+        radius: 0.3
+        name: sphere 71
+        material:
+          lambertian:
+            albedo:
+              - 0.6690774818364732
+              - 0.3284415797868508
+              - 0.8542788185996186
+    - sphere:
+        center:
+          - 10.658918170220462
+          - 3.654985856442047
+          - 0.15
+        radius: 0.3
+        name: sphere 72
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 10.784949376155096
+          - 4.5881010646009415
+          - 0.15
+        radius: 0.3
+        name: sphere 73
+        material:
+          metal:
+            albedo:
+              - 0.9305400740547622
+              - 0.8363906733656318
+              - 0.7126486611534636
+            fuzzy: 0.20294007131930447
+    - sphere:
+        center:
+          - 10.531294913417184
+          - 6.380039283111363
+          - 0.15
+        radius: 0.3
+        name: sphere 74
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 11.038065841087466
+          - 7.97412781948586
+          - 0.15
+        radius: 0.3
+        name: sphere 75
+        material:
+          metal:
+            albedo:
+              - 0.7371263808259432
+              - 0.6328365188009674
+              - 0.7789670593740723
+            fuzzy: 0.4393576736997896
+    - sphere:
+        center:
+          - 10.674462856060392
+          - 9.78797516389075
+          - 0.15
+        radius: 0.3
+        name: sphere 76
+        material:
+          lambertian:
+            albedo:
+              - 0.029455976842589538
+              - 0.7189224982695969
+              - 0.7229910683378182
+    - sphere:
+        center:
+          - 10.966363798564098
+          - 10.812088200447276
+          - 0.15
+        radius: 0.3
+        name: sphere 77
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 11.397159022270616
+          - 12.529651265260352
+          - 0.15
+        radius: 0.3
+        name: sphere 78
+        material:
+          lambertian:
+            albedo:
+              - 0.31906902921807617
+              - 0.09170573733769516
+              - 0.6191195781320566
+    - sphere:
+        center:
+          - 11.180025433888245
+          - 13.765081432377855
+          - 0.15
+        radius: 0.3
+        name: sphere 79
+        material:
+          lambertian:
+            albedo:
+              - 0.9311716963545343
+              - 0.3437393088416832
+              - 0.5527935735169455
+    - sphere:
+        center:
+          - 10.736730304308255
+          - 15.672551236601812
+          - 0.15
+        radius: 0.3
+        name: sphere 710
+        material:
+          metal:
+            albedo:
+              - 0.7949982440709289
+              - 0.9471591500371253
+              - 0.7642366510328666
+            fuzzy: 0.31468093710905765
+    - sphere:
+        center:
+          - 12.388890702339047
+          - -16.040860314238675
+          - 0.15
+        radius: 0.3
+        name: sphere 8-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.293942959805372
+          - -14.924714934318827
+          - 0.15
+        radius: 0.3
+        name: sphere 8-10
+        material:
+          metal:
+            albedo:
+              - 0.7722494320697586
+              - 0.6923458692861197
+              - 0.6614669119767633
+            fuzzy: 0.4224076682472173
+    - sphere:
+        center:
+          - 12.727831436601264
+          - -13.393183718864854
+          - 0.15
+        radius: 0.3
+        name: sphere 8-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.44740127145014
+          - -11.131522043189486
+          - 0.15
+        radius: 0.3
+        name: sphere 8-8
+        material:
+          metal:
+            albedo:
+              - 0.6195506513469065
+              - 0.5025010999754224
+              - 0.9421056239654924
+            fuzzy: 0.004423415182062351
+    - sphere:
+        center:
+          - 12.208388326676955
+          - -9.898082051452343
+          - 0.15
+        radius: 0.3
+        name: sphere 8-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.10893942388945
+          - -8.844061955489117
+          - 0.15
+        radius: 0.3
+        name: sphere 8-6
+        material:
+          metal:
+            albedo:
+              - 0.7372516486108596
+              - 0.8843061987215046
+              - 0.9117888457555908
+            fuzzy: 0.4541319176162967
+    - sphere:
+        center:
+          - 12.201872235514776
+          - -6.60466499558564
+          - 0.15
+        radius: 0.3
+        name: sphere 8-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.0677194081685
+          - -5.820718757095046
+          - 0.15
+        radius: 0.3
+        name: sphere 8-4
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.335945339232008
+          - -4.00911712601124
+          - 0.15
+        radius: 0.3
+        name: sphere 8-3
+        material:
+          lambertian:
+            albedo:
+              - 0.5023894295509737
+              - 0.16383979667425655
+              - 0.9395981511639003
+    - sphere:
+        center:
+          - 12.153510530852383
+          - -2.9216179752006863
+          - 0.15
+        radius: 0.3
+        name: sphere 8-2
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.715230584137988
+          - -1.4844246536771255
+          - 0.15
+        radius: 0.3
+        name: sphere 8-1
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.515340700473232
+          - 0.7905609413326189
+          - 0.15
+        radius: 0.3
+        name: sphere 80
+        material:
+          metal:
+            albedo:
+              - 0.7730462969817582
+              - 0.7856617842392706
+              - 0.7950906684877264
+            fuzzy: 0.04447694389779411
+    - sphere:
+        center:
+          - 12.089460292705947
+          - 2.0632019777560204
+          - 0.15
+        radius: 0.3
+        name: sphere 81
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.562154151512123
+          - 3.2242144864925915
+          - 0.15
+        radius: 0.3
+        name: sphere 82
+        material:
+          lambertian:
+            albedo:
+              - 0.9477738702855378
+              - 0.9449093910062798
+              - 0.9008254063391034
+    - sphere:
+        center:
+          - 12.2905417359747
+          - 4.661281891378209
+          - 0.15
+        radius: 0.3
+        name: sphere 83
+        material:
+          lambertian:
+            albedo:
+              - 0.6216045157351806
+              - 0.7304315946416317
+              - 0.49991248323572923
+    - sphere:
+        center:
+          - 12.084769947516657
+          - 6.757465154275676
+          - 0.15
+        radius: 0.3
+        name: sphere 84
+        material:
+          lambertian:
+            albedo:
+              - 0.7207147487228642
+              - 0.2648944775618697
+              - 0.7416380033982349
+    - sphere:
+        center:
+          - 12.833203190643646
+          - 8.10406716548419
+          - 0.15
+        radius: 0.3
+        name: sphere 85
+        material:
+          metal:
+            albedo:
+              - 0.6468632598687363
+              - 0.8055841704049536
+              - 0.8429651774073437
+            fuzzy: 0.3132524298720827
+    - sphere:
+        center:
+          - 12.470479405777766
+          - 9.160103801030791
+          - 0.15
+        radius: 0.3
+        name: sphere 86
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 12.075817107590886
+          - 10.8443199526413
+          - 0.15
+        radius: 0.3
+        name: sphere 87
+        material:
+          lambertian:
+            albedo:
+              - 0.18159275716947249
+              - 0.8631094356069958
+              - 0.49627787271415963
+    - sphere:
+        center:
+          - 12.619331388802307
+          - 12.217329711887844
+          - 0.15
+        radius: 0.3
+        name: sphere 88
+        material:
+          metal:
+            albedo:
+              - 0.9512711177811257
+              - 0.9376846495694415
+              - 0.8740145813426895
+            fuzzy: 0.1381236759485065
+    - sphere:
+        center:
+          - 12.379704828775388
+          - 14.253041570734537
+          - 0.15
+        radius: 0.3
+        name: sphere 89
+        material:
+          metal:
+            albedo:
+              - 0.7482569023562344
+              - 0.9258349594069567
+              - 0.9705930776668112
+            fuzzy: 0.45971079673922255
+    - sphere:
+        center:
+          - 12.740157010313547
+          - 15.198571822208953
+          - 0.15
+        radius: 0.3
+        name: sphere 810
+        material:
+          lambertian:
+            albedo:
+              - 0.8001567214018497
+              - 0.4232280769947629
+              - 0.5209392870837979
+    - sphere:
+        center:
+          - 13.532578068092715
+          - -15.966151429191855
+          - 0.15
+        radius: 0.3
+        name: sphere 9-11
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 13.572711081906691
+          - -14.581391764857111
+          - 0.15
+        radius: 0.3
+        name: sphere 9-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 13.799004474239021
+          - -12.73329020679568
+          - 0.15
+        radius: 0.3
+        name: sphere 9-9
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 13.618282140359591
+          - -11.574243689593533
+          - 0.15
+        radius: 0.3
+        name: sphere 9-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 14.227565676177232
+          - -10.279417776162534
+          - 0.15
+        radius: 0.3
+        name: sphere 9-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 14.098828393126029
+          - -8.421594733815095
+          - 0.15
+        radius: 0.3
+        name: sphere 9-6
+        material:
+          metal:
+            albedo:
+              - 0.852501035745677
+              - 0.8527135748005976
+              - 0.6040660931520999
+            fuzzy: 0.3327382885485103
+    - sphere:
+        center:
+          - 13.597894862598185
+          - -6.831300483477888
+          - 0.15
+        radius: 0.3
+        name: sphere 9-5
+        material:
+          lambertian:
+            albedo:
+              - 0.4926726661794013
+              - 0.20631785046590018
+              - 0.8936780325661329
+    - sphere:
+        center:
+          - 14.190061769313314
+          - -5.6901122994598206
+          - 0.15
+        radius: 0.3
+        name: sphere 9-4
+        material:
+          metal:
+            albedo:
+              - 0.7927983229390482
+              - 0.5845036595904884
+              - 0.6711856027330527
+            fuzzy: 0.1891139212273505
+    - sphere:
+        center:
+          - 13.711600404430818
+          - -4.2488769967825695
+          - 0.15
+        radius: 0.3
+        name: sphere 9-3
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 14.051549487112357
+          - -2.9883874096249223
+          - 0.15
+        radius: 0.3
+        name: sphere 9-2
+        material:
+          metal:
+            albedo:
+              - 0.6681698183158541
+              - 0.9231169643232218
+              - 0.967346253025862
+            fuzzy: 0.3525519375548277
+    - sphere:
+        center:
+          - 13.957480029948746
+          - -1.2305700803551136
+          - 0.15
+        radius: 0.3
+        name: sphere 9-1
+        material:
+          lambertian:
+            albedo:
+              - 0.0015848022587088505
+              - 0.38403819653874754
+              - 0.3987710746242473
+    - sphere:
+        center:
+          - 13.839868884621316
+          - 0.7975239176004012
+          - 0.15
+        radius: 0.3
+        name: sphere 90
+        material:
+          lambertian:
+            albedo:
+              - 0.40223370174293965
+              - 0.5418931469366494
+              - 0.49584329459025805
+    - sphere:
+        center:
+          - 13.939552964959809
+          - 2.0939144386423494
+          - 0.15
+        radius: 0.3
+        name: sphere 91
+        material:
+          lambertian:
+            albedo:
+              - 0.15983502067254016
+              - 0.9736713318214472
+              - 0.5731687540504673
+    - sphere:
+        center:
+          - 13.921568339079887
+          - 3.834097984208674
+          - 0.15
+        radius: 0.3
+        name: sphere 92
+        material:
+          lambertian:
+            albedo:
+              - 0.2626584502254752
+              - 0.30526357708873436
+              - 0.9868405131005678
+    - sphere:
+        center:
+          - 13.894121630544536
+          - 5.194960770568058
+          - 0.15
+        radius: 0.3
+        name: sphere 93
+        material:
+          metal:
+            albedo:
+              - 0.8710494648020046
+              - 0.5962776715547387
+              - 0.9434832669387445
+            fuzzy: 0.02965398208918535
+    - sphere:
+        center:
+          - 13.721438616638913
+          - 6.281016896798201
+          - 0.15
+        radius: 0.3
+        name: sphere 94
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 14.098259990232227
+          - 7.7450771032610035
+          - 0.15
+        radius: 0.3
+        name: sphere 95
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 14.114898826198006
+          - 9.706365223012142
+          - 0.15
+        radius: 0.3
+        name: sphere 96
+        material:
+          lambertian:
+            albedo:
+              - 0.6279591469843473
+              - 0.8456709570209578
+              - 0.5442904914241378
+    - sphere:
+        center:
+          - 14.073804155027185
+          - 10.522853617870611
+          - 0.15
+        radius: 0.3
+        name: sphere 97
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 13.74126072769282
+          - 12.21084368135942
+          - 0.15
+        radius: 0.3
+        name: sphere 98
+        material:
+          lambertian:
+            albedo:
+              - 0.3007876829236799
+              - 0.3265786809448223
+              - 0.6936393507718206
+    - sphere:
+        center:
+          - 14.130034568939978
+          - 13.789618936873405
+          - 0.15
+        radius: 0.3
+        name: sphere 99
+        material:
+          lambertian:
+            albedo:
+              - 0.9619849210093426
+              - 0.7340525803585772
+              - 0.7073083668806777
+    - sphere:
+        center:
+          - 14.297106796072718
+          - 15.820756182616106
+          - 0.15
+        radius: 0.3
+        name: sphere 910
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.787986133473556
+          - -15.720790178682657
+          - 0.15
+        radius: 0.3
+        name: sphere 10-11
+        material:
+          metal:
+            albedo:
+              - 0.9809333597469018
+              - 0.9848163166957484
+              - 0.6567590142143135
+            fuzzy: 0.24096050050905538
+    - sphere:
+        center:
+          - 15.838513918500027
+          - -14.89650045018499
+          - 0.15
+        radius: 0.3
+        name: sphere 10-10
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.671822376536646
+          - -12.781461091627753
+          - 0.15
+        radius: 0.3
+        name: sphere 10-9
+        material:
+          metal:
+            albedo:
+              - 0.9323742665586561
+              - 0.9190343687493463
+              - 0.9725100674432107
+            fuzzy: 0.014079909191794915
+    - sphere:
+        center:
+          - 15.88080198517955
+          - -11.207942151887647
+          - 0.15
+        radius: 0.3
+        name: sphere 10-8
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.660261281699293
+          - -10.080198166973071
+          - 0.15
+        radius: 0.3
+        name: sphere 10-7
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.327119242811527
+          - -8.259109036711145
+          - 0.15
+        radius: 0.3
+        name: sphere 10-6
+        material:
+          metal:
+            albedo:
+              - 0.6389735210482782
+              - 0.9603895255934272
+              - 0.5197834112078886
+            fuzzy: 0.22311969646314667
+    - sphere:
+        center:
+          - 15.023128395365092
+          - -7.319515193499615
+          - 0.15
+        radius: 0.3
+        name: sphere 10-5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.347864559425982
+          - -5.752203168170893
+          - 0.15
+        radius: 0.3
+        name: sphere 10-4
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.240129751818976
+          - -3.779049906920168
+          - 0.15
+        radius: 0.3
+        name: sphere 10-3
+        material:
+          lambertian:
+            albedo:
+              - 0.9638490923829078
+              - 0.17568629583976084
+              - 0.32621716204959034
+    - sphere:
+        center:
+          - 15.432709096130793
+          - -2.113852759517751
+          - 0.15
+        radius: 0.3
+        name: sphere 10-2
+        material:
+          lambertian:
+            albedo:
+              - 0.4589520102829891
+              - 0.3123112472240913
+              - 0.29307343138062125
+    - sphere:
+        center:
+          - 15.47476100019735
+          - -0.9069153077599221
+          - 0.15
+        radius: 0.3
+        name: sphere 10-1
+        material:
+          metal:
+            albedo:
+              - 0.5469476763532796
+              - 0.9047840429316778
+              - 0.873494287327192
+            fuzzy: 0.24184696199584588
+    - sphere:
+        center:
+          - 15.166663102016075
+          - 0.8349705629878931
+          - 0.15
+        radius: 0.3
+        name: sphere 100
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.265448931964826
+          - 2.017924255438801
+          - 0.15
+        radius: 0.3
+        name: sphere 101
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.552522387690441
+          - 3.4956214294568486
+          - 0.15
+        radius: 0.3
+        name: sphere 102
+        material:
+          metal:
+            albedo:
+              - 0.6896582222762592
+              - 0.9748587942512539
+              - 0.7870890898943894
+            fuzzy: 0.01983204139280481
+    - sphere:
+        center:
+          - 15.623972940046553
+          - 5.098184155945322
+          - 0.15
+        radius: 0.3
+        name: sphere 103
+        material:
+          metal:
+            albedo:
+              - 0.7388796781370899
+              - 0.9396258130402361
+              - 0.7433145498533915
+            fuzzy: 0.11358780265417223
+    - sphere:
+        center:
+          - 15.800431741538823
+          - 6.422445317818481
+          - 0.15
+        radius: 0.3
+        name: sphere 104
+        material:
+          lambertian:
+            albedo:
+              - 0.13851256623634822
+              - 0.4655295705774516
+              - 0.287633251464557
+    - sphere:
+        center:
+          - 15.085595738575988
+          - 8.26941055602523
+          - 0.15
+        radius: 0.3
+        name: sphere 105
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.208122748124696
+          - 9.364554479672016
+          - 0.15
+        radius: 0.3
+        name: sphere 106
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.708257905409539
+          - 11.137197724722522
+          - 0.15
+        radius: 0.3
+        name: sphere 107
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.32328002876695
+          - 12.697636712473923
+          - 0.15
+        radius: 0.3
+        name: sphere 108
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.068861417059892
+          - 13.506629646251142
+          - 0.15
+        radius: 0.3
+        name: sphere 109
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        center:
+          - 15.317702306507258
+          - 15.185739427738877
+          - 0.15
+        radius: 0.3
+        name: sphere 1010
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        name: "floor"
+        center: [0.0, 0.0, -10001.0]
+        radius: 10000.0
+        material:
+          lambertian:
+            albedo: [0.6, 0.6, 0.6]

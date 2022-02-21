@@ -1,0 +1,62 @@
+output_name:
+  "./sample.png"
+render:
+  width: 1080
+  height: 720
+  sampling: 10
+  max_scatter_depth: 50
+scene:
+  camera:
+    lookfrom: [0.0, -20.0, 3.0]
+    lookat: [0.0, -1.0, 0.0]
+    vup: [0.0, 1.0, -0.5]
+    vofv: 20.0
+    aspect: 1.4783
+    aperture: 0.1
+    distance_to_focus: 19.10 #distance between lookfrom and lookat
+  objects:
+    - sphere:
+        name: "sphere 1"
+        center: [0.0, 1.0, 0.75]
+        radius: 1.5
+        material:
+          lambertian:
+            albedo: [0.9, 0.7, 0.4]
+    - sphere:
+        name: "sphere 2"
+        center: [2.7, 0.5, 0.4]
+        radius: 0.8
+        material:
+          metal:
+            albedo: [0.7, 0.3, 0.3]
+            fuzzy: 0.0
+    - sphere:
+        name: "sphere 3"
+        center: [-3.5, 2.0, 0.15]
+        radius: 0.3
+        material:
+          metal:
+            albedo: [0.0, 0.3, 0.8]
+            fuzzy: 0.1
+    - sphere:
+        name: "sphere 4"
+        center: [-3.0, 1.0, 0.75]
+        radius: 1.5
+        material:
+          dielectric:
+            refraction_index: 1.5
+    - sphere:
+        name: "sphere 5"
+        center: [-2.5, 4.0, 0.15]
+        radius: 0.3
+        material:
+          metal:
+            albedo: [0.8, 0.1, 0.1]
+            fuzzy: 0.0
+    - sphere:
+        name: "floor"
+        center: [0.0, 0.0, -100.0]
+        radius: 100.5
+        material:
+          lambertian:
+            albedo: [0.9, 0.9, 0.0]
