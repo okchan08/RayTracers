@@ -3,7 +3,7 @@ output_name:
 render:
   width: 1920
   height: 1080
-  sampling: 500
+  sampling: 200
   max_scatter_depth: 50
 scene:
   camera:
@@ -11,7 +11,7 @@ scene:
     lookat: [0.0, -1.0, 0.0]
     vup: [0.0, 1.0, -0.5]
     vofv: 20.0
-    aspect: 1.4783
+    aspect: 1.777778
     aperture: 0.1
     distance_to_focus: 19.10 #distance between lookfrom and lookat
   objects:
