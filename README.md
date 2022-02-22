@@ -1,6 +1,11 @@
 # RayTracers
 Rust implementation of ray tracer.
 
+# Usage
+```
+cargo run --release example_yaml/example002.yaml
+```
+
 # License
 This project is MIT license.
 
